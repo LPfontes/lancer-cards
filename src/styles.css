@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+.keyword {
+  color: #29b6f6;
+  
+  font-weight: bold;
+  cursor: help;
+}
+body {
+  font-family: "Oxygen", sans-serif;
+  color: #e0e0e0; /* Light text for dark mode */
+  background-color: #121212; /* Dark background */
+}

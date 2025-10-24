@@ -1,0 +1,80 @@
+<div class="main">
+  <div class="turn_summary">
+  <h2 class="turn_summary_title">POR TURNO</h2>
+  <div class="turn_blocks_container">
+    
+    <div class="turn_block block--action">
+      <div class="block_icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M17.63 5.84C17.27 5.33 16.67 5 16 5H8C7.33 5 6.73 5.33 6.37 5.84L2.37 12L6.37 18.16C6.73 18.67 7.33 19 8 19H16C16.67 19 17.27 18.67 17.63 18.16L21.63 12L17.63 5.84Z"/></svg>
+      </div>
+      <span class="block_title">1 Ação Completa<br/><em>ou</em> 2 Ações Rápidas</span>
+    </div>
+    
+    <div class="turn_block block--move">
+      <div class="block_icon">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L10.41 3.59L16.83 10H4V12H16.83L10.41 18.41L12 20L20 12L12 2Z"/></svg>
+      </div>
+      <span class="block_title">Movimento</span>
+    </div>
+    
+    <div class="turn_block block--overcharge">
+      <div class="block_icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/></svg>
+      </div>
+      <span class="block_title">Sobrecarregar</span>
+    </div>
+    
+    <div class="turn_block block--reaction">
+      <div class="block_icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5M12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17M12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"/></svg>
+      </div>
+      <span class="block_title">Reação</span>
+    </div>
+    
+    <div class="turn_block block--free">
+      <div class="block_icon">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M13 6V18L21.5 12M4 18L12.5 12L4 6V18Z"/></svg>
+      </div>
+      <span class="block_title">Ação Livre</span>
+    </div>
+
+  </div>
+  </div>
+  @for (category of categories; track category) {
+    <div class="category_item">
+      <h2 class="category_title">{{ category }}</h2>
+
+      <div class="cards_category_list">
+        @for (card of groupedCards[category]; track card.title) {
+          <button class="action-button" (click)="openModal(card)">
+            {{ card.title }}
+          </button>
+        }
+      </div>
+    </div>
+  }
+
+  <!-- Modal Structure -->
+  @if (selectedCard) {
+    <div class="modal-overlay" (click)="onOverlayClick($event)">
+      <div class="modal-content">
+        <button class="modal-close" (click)="closeModal()">&times;</button>
+        <h2 class="modal_title">{{ selectedCard.title }}</h2>
+        <div class="modal_body">
+          <div class="card_image">
+            <img [src]="selectedCard.imageUrl" [alt]="selectedCard.imageAlt" />
+          </div>
+          <div class="card_text">
+            <p [innerHTML]="selectedCard.description | keywordTooltip: definitions"></p>
+            <hr />
+            <div class="card_tags">
+              @for (tag of selectedCard.tags; track tag.name) {
+                <span class="tag">{{ tag.name }} </span>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>
