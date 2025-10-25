@@ -12,6 +12,7 @@
 }
 
 .category_item {
+  display: none; /* Esconde o elemento por padrão */
   margin-bottom: 1rem;
   border-bottom: 2px solid #333; /* Darker border */
   padding-bottom: 1rem;
@@ -191,4 +192,68 @@ hr {
    font-weight: bold;
    text-transform: uppercase;
    white-space: nowrap; /* Garante que a tag não quebre linha */
+}
+
+/* Estilo para os links de palavras-chave gerados pelo pipe */
+::ng-deep .keyword-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: #ffae8a; /* Cor para destacar */
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+::ng-deep .keyword-link:hover {
+  color: #ff8a65; /* Cor ao passar o mouse */
+}
+
+/* Estilos para o menu de navegação de categorias */
+.category-nav {
+  position: sticky;
+  top: 0;
+  background-color: #1a1a1a; /* Um pouco mais escuro para se destacar */
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid #c22026;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav-link:hover {
+  background-color: #c22026;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.category_item.visible {
+  display: block; /* Mostra o elemento quando a classe 'visible' é aplicada */
+}
+
+.modal-content {
+  /* ... outros estilos ... */
+  position: fixed; /* Mude para fixed para usar transform */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-out;
+  will-change: transform;
 }

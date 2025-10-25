@@ -1,0 +1,577 @@
+{
+ "content": [
+  {
+   "title": "Agarrar",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>AGARRAR</strong>, você tenta segurar um alvo e sobrepujá-lo — desarmando, subjugando ou causando dano a ele para que não possa fazer o mesmo a você.<br /><br />Para <strong>AGARRAR</strong>, escolha um personagem adjacente e faça um ataque corpo a corpo. Em um acerto:<br />• Ambos os personagens ficam <strong>[ENGAJADO]s</strong>;<br />• Nenhum dos personagens pode <strong>[IMPULSIONAR]</strong> ou usar reações pela duração do agarrão;<br />• O personagem menor fica <strong>[IMOBILIZADO]</strong>, mas se move quando o personagem maior se mover, espelhando seus movimentos. Se ambos os lados forem do mesmo <strong>[TAMANHO]</strong>, ambos podem fazer um teste disputado de <strong>[CASCO]</strong> no início dos seus turnos; o vencedor conta como maior que o perdedor até que o teste seja repetido.<br /><br /><strong>AGARRAR</strong> termina quando:<br />• Qualquer um dos personagens quebram adjacência, como quando ambos são empurrados por outro efeito;<br />• O atacante escolhe terminar o agarrão como uma ação livre;<br />• O defensor se libertar sendo bem-sucedido em um teste disputado de <strong>[CASCO]</strong> como uma ação livre.<br /><br />Se um <strong>AGARRAR</strong> envolver mais que dois personagens, as mesmas regras se aplicam, mas quando contar o <strong>[TAMANHO]</strong>, some o <strong>[TAMANHO]</strong> de todos os personagens de cada lado. Por exemplo, se dois personagens aliados <strong>[TAMANHO]</strong> 1 estiverem agarrando um único inimigo <strong>[TAMANHO]</strong> 2, os personagens aliados contam como <strong>[TAMANHO]</strong> 2 combinado e podem tentar arrastar seu inimigo."
+  },
+  {
+   "title": "Alvejar",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>ALVEJAR</strong>, você ataca com uma única arma.<br /><br />Para <strong>ALVEJAR</strong>, escolha uma arma e um alvo válido dentro do <strong>[ALCANCE]</strong> (ou <strong>[AMEAÇA]</strong>) e então faça um ataque.<br /><br />• Além do seu ataque primário, você também pode atacar com uma arma <strong>[AUXILIAR]</strong> diferente que esteja no mesmo encaixe. Essa arma não causa dano bônus.<br />• Armas <strong>[SUPERPESADAS]</strong> são volumosas demais para usar com <strong>ALVEJAR</strong>, e só podem ser disparadas como parte de uma <strong>[BARRAGEM]</strong>."
+  },
+  {
+   "title": "Empurrar",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>EMPURRAR</strong>, você faz um ataque corpo a corpo com o objetivo de derrubar ou empurrar um alvo.<br /><br />Para <strong>EMPURRAR</strong>, faça um ataque corpo a corpo contra um personagem adjacente do mesmo <strong>[TAMANHO]</strong> ou menor que você. Se você for bem-sucedido, seu alvo fica <strong>[PROSTRADO]</strong> e você pode escolher empurrá-lo um espaço para trás, na direção oposta."
+  },
+  {
+   "title": "Esconder",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>ESCONDER-SE</strong>, você obscurece a posição do seu mecha para se reposicionar, evitar sofrer tiros, reparar ou emboscar.<br /><br />Para <strong>ESCONDER-SE</strong>, você não pode estar <strong>[ENGAJADO]</strong> e precisa estar fora da linha de visão de um inimigo, obscurecido por cobertura suficiente ou invisível. Se conseguir <strong>ESCONDER-SE</strong> enquanto atende a um desses critérios, você recebe o estado de <strong>[ESCONDIDO]</strong>.<br /><br />Cobertura pesada é o suficiente para <strong>ESCONDER-SE</strong> enquanto ela for grande o suficiente para te ocultar, mas cobertura leve só é suficiente se você estiver completamente dentro de una área ou zona que te garanta cobertura leve — muitos sistemas e talentos que fornecem cobertura leve ou o bom e velho obscurecimento não proveem o suficiente para se esconder atrás!<br /><br />Se estiver <strong>[INVISÍVEL]</strong>, você sempre pode <strong>ESCONDER-SE</strong>, independente de cobertura, a menos que esteja <strong>[ENGAJADO]</strong>.<br /><br />A localização exata de alvos <strong>[ESCONDIDOS]</strong> não pode ser identificada e eles não podem ser visados diretamente por ataques ou ações hostis, mas eles ainda podem ser atingidos por ataques que afetem uma área. Mesmo que os <strong>[PNJs]</strong> não possam localizar um personagem <strong>[ESCONDIDO]</strong>, eles ainda podem saber uma localização aproximada. Então, um <strong>[PNJ]</strong> pode descarregar um lança-chamas em uma área mesmo que não saiba exatamente onde o <strong>PJ</strong> <strong>[ESCONDIDO]</strong> está à espreita.<br /><br />Adicionalmente, outros personagens ignoram engajamento com você enquanto você estiver <strong>[ESCONDIDO]</strong> — assume-se que você está tentando se manter furtivo.<br /><br />Você para de ficar <strong>[ESCONDIDO]</strong> se fizer um ataque (corpo a corpo, à distância ou tecnológico) ou se o seu mecha fizer uma ação hostil (como forçar um alvo a fazer um salvamento). Usar <strong>[IMPULSIONAR]</strong> ou reações com seu mecha também faz com que você deixe de estar <strong>[ESCONDIDO]</strong>. Outras ações podem ser usadas normalmente.<br /><br />Você também perde imediatamente o estado <strong>[ESCONDIDO]</strong> se a sua cobertura desaparecer ou for destruída, ou se você perder cobertura devido a linha de visão (por exemplo, se um mecha pular por cima de um muro e agora consegue traçar uma linha ininterrupta até você). Se estiver se escondendo enquanto está <strong>[INVISÍVEL]</strong>, você perde <strong>[ESCONDIDO]</strong> quando deixar de estar <strong>[INVISÍVEL]</strong>, a menos que esteja em uma cobertura."
+  },
+  {
+   "title": "Impulsionar",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>IMPULSIONAR</strong>, você se move pelo menos 1 espaço, até a sua <strong>[VELOCIDADE]</strong>. Isso permite que você faça um movimento adicional além do seu movimento padrão. Certos talentos e sistemas só podem ser usados quando você usar <strong>IMPULSIONAR</strong>, não quando fizer um movimento padrão."
+  },
+  {
+   "title": "Procurar",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>PROCURAR</strong>, você tenta identificar personagens escondidos. Para <strong>PROCURAR</strong> em um mecha, escolha um personagem ao alcance dos <strong>[SENSORES]</strong> que você suspeite estar <strong>[ESCONDIDO]</strong> e faça um teste disputado de <strong>[SISTEMAS]</strong> contra a <strong>[AGILIDADE]</strong> dele.<br /><br />Para <strong>PROCURAR</strong> quando estiver sem um mecha, faça um teste disputado de perícia, adicionando os bônus de seus gatilhos normally. Isso pode ser usado para revelar personagens dentro de <strong>[ALCANCE 5]</strong>.<br /><br />Após um personagem <strong>[ESCONDIDO]</strong> ser encontrado usando <strong>PROCURAR</strong>, ele imediatamente deixa de estar <strong>[ESCONDIDO]</strong> e pode ser localizado nortalmalmente por qualquer personagem."
+  },
+  {
+   "title": "Programar Rápido",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>PROGRAMAR RÁPIDO</strong>, você engaja em guerra eletrônica, contramedidas ou alguma outra ação técnica, geralmente ajudado pelos poderosos núcleos computacionais e de simulação do seu mecha.<br /><br />Sempre que usar essa ação, escolha uma opção da lista de <strong>PROGRAMAR RÁPIDO</strong>. Todos os mechas têm acesso a essas opções, mas alguns sistemas as melhoram ou disponibilizam novas opções.<br /><br />Diferente de outras ações rápidas, <strong>PROGRAMAR RÁPIDO</strong> pode ser usada mais de una vez por turno; entretanto, uma opção diferente deve ser escolhida a cada vez, exceto se especificado de outra forma ou concedido como uma ação livre.<br /><br />Para usar <strong>PROGRAMAR RÁPIDO</strong>, escolha uma das seguintes opções: [ESCANEAR] , [INVADIR], [REFORÇAR], [TRAVAR MIRA]."
+  },
+  {
+   "title": "Travar Mira",
+   "category": "Programar Rápido",
+   "description": "Quando <strong>TRAVAR MIRA</strong>, você marca um alvo digitalmente, iluminando-o para os sistemas de mira de seus companheiros e expondo pontos fracos.<br /><br />Para <strong>TRAVAR MIRA</strong>, você escolhe um personagem na linha de visão e ao alcance dos <strong>[SENSORES]</strong>. Ele sofre a condição <strong>[TRAVADO EM MIRA]</strong>. Qualquer personagem que faça um ataque contra alguém <strong>[TRAVADO EM MIRA]</strong> pode escolher receber +1 <strong>[DIFICULDADE]</strong> no ataque e então remover a condição <strong>[TRAVADO EM MIRA]</strong> depois que o ataque for resolvido. Isso é chamado de consumir <strong>[TRAVADO EM MIRA]</strong>."
+  },
+  {
+   "title": "Invadir",
+   "category": "Programar Rápido",
+   "description": "Quando <strong>INVADIR</strong>, você executa um ataque eletrônico direto contra um alvo. Para <strong>INVADIR</strong>, faça um ataque tecnológico contra um personagem na linha de visão e ao alcance dos <strong>[SENSORES]</strong>. Em um sucesso, seu alvo sofre 2 <strong>[CALOR]</strong> e você escolhe uma das opções de <strong>[INVASÃO]</strong> disponíveis a você. <strong>[FRAGMENTAR SINAL]</strong> está disponível para todos os personagens, e opções adicionais são concedidas por certos sistemas e equipamentos com a tag <strong>INVADIR</strong>.<br /><br /><strong>[FRAGMENTAR SINAL]</strong>. Você transmite informações falsas, mensagens obscenas ou sinais fantasmas para o núcleo computacional do alvo. Ele fica <strong>[IMPEDIDO]</strong> e <strong>[LENTO]</strong> até o final do próximo turno dele.<br /><br />Você também pode <strong>INVADIR</strong> personagens aliados voluntários para criar certos efeitos. Se o seu alvo for voluntário e aliado, você automaticamente é bem-sucedido, isso não conta como um ataque e o alvo não recebe nenhum calor."
+  },
+  {
+   "title": "Escanear",
+   "category": "Programar Rápido",
+   "description": "Quando <strong>ESCANEAR</strong>, você usa os poderosos sensores de seu mecha para realizar um escaneamento profundo em um inimigo.<br /><br />Para <strong>ESCANEAR</strong>, escolha um personagem ou objeto na linha de visão e ao alcance dos <strong>[SENSORES]</strong>, e então pergunte ao <strong>MJ</strong> uma das seguintes informações, que ele deve responder honestamente:<br /><br />• Armas, sistemas e estatísticas completas (<strong>[PV]</strong>, <strong>[VELOCIDADE]</strong>, <strong>[EVASÃO]</strong>, <strong>[ARMADURA]</strong>, <strong>[PERÍCIAS DE MECHA]</strong> e assim por diante) de seu alvo.<br />• Uma informação sigilosa sobre o alvo, como carga ou dados confidenciais, missão atual, a identidade do piloto e assim por diante.<br />• Informação genérica ou pública sobre o alvo que pode ser retirada de bancos de informação ou registros, como o número do modelo de um mecha.<br /><br />As informações coletadas são as atuais na hora que <strong>ESCANEAR</strong> — se o alvo sofrer dano depois, por exemplo, você não recebe uma atualização."
+  },
+  {
+   "title": "Reforçar",
+   "category": "Programar Rápido",
+   "description": "Quando <strong>REFORÇAR</strong>, você usa o formidável poder de processamento de seu mecha para melhorar os sistemas de outro personagem.<br /><br />Para <strong>REFORÇAR</strong>, escolha um personagem ao alcance dos <strong>[SENSORES]</strong>. Ele recebe +2 <strong>[DIFICULDADE]</strong> no próximo teste de perícia ou salvamento que fizer entre agora e o final do próximo turno dele."
+  },
+  {
+   "title": "Desengajar",
+   "category": "Ação Completa",
+   "description": "Quando <strong>DESENGAJAR</strong>, você tenta sair com segurança de uma situação perigosa, fazer uma retirada firme e calculada ou confiar na agilidade do seu mecha para sair do alcance de ameaça mais rápido que um inimigo possa atacar.<br /><br />Até o final do seu turno atual, você ignora engajamentos e seu movimento não provoca reações."
+  },
+  {
+   "title": "Barragem",
+   "category": "Ação Completa",
+   "description": "Quando usar <strong>BARRAGEM</strong>, você ataca com duas armas ou uma arma <strong>[SUPERPESADA]</strong>.<br /><br />Para usar <strong>BARRAGEM</strong>, escolha suas armas e um ou dois alvos diferentes — que estejam dentro do alcance — para fazer um ataque com cada arma.<br /><br />• Além dos seus ataques primários, você também pode atacar com uma arma <strong>[AUXILIAR]</strong> de cada um dos seus encaixes ocupados, desde que a arma <strong>[AUXILIAR]</strong> ainda não tenha sido disparada nessa ação. Essas armas <strong>[AUXILIARES]</strong> não causam dano bônus.<br />• Armas <strong>[SUPERPESADAS]</strong> só podem ser disparadas usando <strong>BARRAGEM</strong>."
+  },
+  {
+   "title": "Programar Completo",
+   "category": "Ação Completa",
+   "description": "Quando <strong>PROGRAMAR COMPLETO</strong>, você realiza múltiplas ações de programar ou uma ação única, mais complexa.<br /><br />Para <strong>PROGRAMAR COMPLETO</strong>, escolha duas opções de <strong>[PROGRAMAR RÁPIDO]</strong> ou uma única opção que requer <strong>PROGRAMAR COMPLETO</strong> para ativar. Se escolher duas ações de <strong>[PROGRAMAR RÁPIDO]</strong>, você pode escolher a mesma opção múltiplas vezes."
+  },
+  {
+   "title": "Improvisar Ataque",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>IMPROVISAR ATAQUE</strong>, você ataca com a coronha de um fuzil, punho ou outra arma corpo a corpo improvisada. Você pode usar qualquer coisa desde a coronha de uma arma a uma laje de concreto ou um pedaço de placa de casco — a descrição do ataque cabe a você!<br /><br />Para <strong>IMPROVISAR ATAQUE</strong>, faça um ataque corpo a corpo contra um alvo adjacente. Se for bem-sucedido, ele sofre 1d6 [DANO]."
+  },
+  {
+   "title": "Estabilizar",
+   "category": "Ação Completa",
+   "description": "Quando <strong>ESTABILIZAR</strong>, você ativa os protocols de emergência para remover calor em excesso dos sistemas de seu mecha, reparar seu chassi onde for possível ou eliminar um código hostil.<br /><br />Para <strong>ESTABILIZAR</strong>, escolha um dos seguintes:<br />• Esfrie seu mecha, removendo todo calor e <strong>[EXPOSTO]</strong>.<br />• Marque 1 de <strong>[REPARO]</strong> para restaurar todos os <strong>[PV]</strong>.<br /><br />Adicionalmente, escolha um dos seguintes:<br />• Recarregue todas as armas com <strong>[RECARGA]</strong>.<br />• Remova qualquer queimadura <strong>[QUEIMADURA]</strong> que atualmente está afetando seu mecha.<br />• Remova uma condição que não foi causada por um dos seus próprios sistemas, talentos etc.<br />• Remova uma condição de um aliado adjacente que não foi causada por um de seus próprios sistemas, talentos etc."
+  },
+  {
+   "title": "Autodestruir",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>AUTODESTRUIR</strong>, você sobrecarrega o reator do seu mecha em uma cartada final catastrófica quando não houver outra opção de escapar ou você julgar seu sacrifício como necessário.<br /><br />Você pode se <strong>AUTODESTRUIR</strong> como uma ação rápida, iniciando uma fusão do reator. No final do seu próximo turno, ou no final de um de seus turnos nas próximas duas rodadas (você escolhe), seu mecha explode como se tivesse sofrido uma fusão do reator. A detonação aniquila seu mecha, matando qualquer um dentro dela, provocando uma <strong>[EMANÇÃO 2]</strong> que causa 4d6 <strong>[EXPLOSIVO]</strong>. Personagens pegos na emanação que forem bem-sucedidos em um salvamento de <strong>[AGILIDADE]</strong> sofrem metade do dano."
+  },
+  {
+   "title": "Ativar",
+   "category": "Variável",
+   "description": "Quando <strong>ATIVAR</strong>, você usa um sistema ou equipamento que requer uma ação rápida ou completa. Esses sistemas têm as tags de <strong>[AÇÃO RÁPIDA]</strong> ou <strong>[AÇÃO COMPLETA]</strong>. Você pode <strong>ATIVAR</strong> quantas vezes quiser em um turno, mas não pode <strong>ATIVAR</strong> o mesmo sistema mais de uma vez, a menos que também possa fazê-lo como uma ação livre.",
+   "tags": []
+  },
+  {
+   "title": "Desligar",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>DESLIGAR</strong>, seu mecha desliga completely e entra em um estado de descanso. É sempre um risco fazer isso em campo, mas às vezes é necessário para impedir uma sobrecarga catastrófca de sistemas ou um cascateamento de <strong>[PNH]</strong>.<br /><br />Você pode <strong>DESLIGAR</strong> seu mecha como uma ação rápida. Seu mecha sofre a condição <strong>[DESLIGADO]</strong>, com estes efeitos:<br />• Todo calor é removido, assim como <strong>[EXPOSTO]</strong>;<br />• Quaisquer <strong>[PNHs]</strong> em cascata retornam a um estado normal;<br />• Quaisquer estados ou condições que estiverem afetando seu mecha e forem causados por ações de programar, como <strong>[TRAVADO EM MIRA]</strong>, se encerramTEE imediatamente.<br />• O mecha adquire <strong>[IMUNIDADE]</strong> a todas as ações de programar e ataques tecnológicos, incluindo de quaisquer personagens aliados;<br />• O mecha fica <strong>[ATORDOADO]</strong> indefinidamente. Nada pode impedir essa condição, e ela permanece até que o mecha deixe de estar <strong>[DESLIGADO]</strong>.<br /><br />A única forma de remover o estado <strong>[DESLIGADO]</strong> é Ligar o mecha."
+  },
+  {
+   "title": "Montar, Desmontar e Ejetar",
+   "category": "Variável",
+   "description": "Quando <strong>MONTAR</strong> ou <strong>DESMONTAR</strong>, você sobe ou desce de um mecha. Montar e desmontar são termos preferidos pela maioria dos pilotos. Você \"não entra\" ou \"sobe\" — você monta. Afinal, você é a cavalaria.<br /><br />Você pode <strong>MONTAR</strong> ou <strong>DESMONTAR</strong> como uma <strong>[AÇÃO COMPLETA]</strong>. Você precisa estar adjacente a seu mecha para <strong>MONTAR</strong>. Da mesma forma, quando <strong>DESMONTAR</strong>, você é colocado em um espaço adjacente — se não houver espaços livres, você não pode <strong>DESMONTAR</strong>.<br /><br />Adicionalmente, você também pode <strong>MONTAR</strong> ou <strong>DESMONTAR</strong> em mechas ou veículos aliados voluntários. Quando fizer isso, entre no mesmo espaço e então mova-se com eles.<br /><br />Você também pode <strong>EJETAR</strong> como uma <strong>[AÇÃO RÁPIDA]</strong>, voando 6 espaços em uma direção à sua escolha; entretanto, esse é um sistema de emergência de uso único — ele deixa seu mecha <strong>[IMPEDIDO]</strong> e você não pode <strong>EJETAR</strong> novamente até seu próximo <strong>[REPARO COMPLETO]</strong>.",
+   "tags": []
+  },
+  {
+   "title": "Ligar",
+   "category": "Ação Completa",
+   "description": "Com uma <strong>[AÇÃO COMPLETA]</strong>, pode <strong>LIGAR</strong> um mecha que esteja pilotando, removendo <strong>[DESLIGADO]</strong> e restaurando seu mecha a um estado energizado para funcionar."
+  },
+  {
+   "title": "Teste de Perícia",
+   "category": "Ação Completa",
+   "description": "Quando fizer um <strong>TESTE DE PERÍCIA</strong>, você realiza uma atividade que não é coberta por nenhuma outra ação, mas possui um objetivo claro e é complexo o suficiente para exigir uma rolagem. Os parâmetros e resultados dos <strong>TESTES DE PERÍCIA</strong> dependem do <strong>MJ</strong>, mas eles precisam ser envolventes o suficiente para requerer uma ação completa. Se você quiser fazer algo que pode ser feito rapidamente, nenhuma ação é necessária.<br /><br />Exemplos de <strong>TESTES DE PERÍCIA</strong>:<br />• Bruja, a pé, quer abrir uma porta trancada. O <strong>MJ</strong> pede para ela fazer um <strong>TESTE DE PERÍCIA</strong> e decide que Bruja pode usar o bônus de seu gatilho \"Hackear ou Consertar\"<br />• Pan, em seu mecha, quer pular um abismo que é mais largo do que ele normalmente pode pular. O <strong>MJ</strong> decide que ele pode tentar com <strong>[AGILIDADE]</strong>.<br />• Zaid quer levantar uma rocha pesada com seu mecha para liberar uma passagem. O <strong>MJ</strong> decide que isso é probably uma ação que requer um <strong>TESTE DE PERÍCIA</strong> com <strong>[CASCO]</strong>."
+  },
+  {
+   "title": "Preparar",
+   "category": "Ação Rápida",
+   "description": "Quando <strong>PREPARAR</strong> você se apronta para usar uma ação em um momento específico ou quando uma condição específica é atingida (um tiro mais vantajoso, por exemplo).<br /><br />Como uma <strong>[AÇÃO RÁPIDA]</strong>, você pode <strong>PREPARAR</strong> qualquer outra <strong>[AÇÃO RÁPIDA]</strong> e especificar um acionamento. Até o início do seu próximo turno, quando houver o acionamento especificado, você pode usar a ação rápida preparada como uma <strong>[REAÇÃO]</strong>.<br /><br />O acionamento para sua ação preparada deve ser construído da seguinte forma: “Quando X, então Y”, onde X é a reação, ação ou movimento usado por um personagem hostil ou aliado e Y é sua ação rápida preparada. Por exemplo, “quando um personagem aliado ficar adjacente a mim, eu quero jogar uma granada de fumaça” ou “quando um personagem hostil ficar adjacente a mim, eu quero empurrar ele”.<br /><br />Sua preparação conta como usar uma ação, então ela segue as restrições normais dessa ação e em usar múltiplas ações. Você não pode, por exemplo, <strong>[ALVEJAR]</strong> e então <strong>PREPARAR</strong> para <strong>[ALVEJAR]</strong> novamente; você também não pode se mover e então <strong>PREPARAR</strong> para <strong>[ALVEJAR]</strong> com uma arma de <strong>[ARTILHARIA]</strong>, que normalmente necessita ser disparada antes de se mover ou fazer qualquer outra coisa em seu turno. Adicionalmente, depois que <strong>PREPARAR</strong> uma ação, você não pode se mover ou usar quaisquer outras ações ou reações até o início do seu próximo turno ou até que sua ação preparada tenha sido acionada (o que ocorrer primeiro).<br /><br />Mesmo que você não possa usar reações enquanto mantém uma ação preparada, você pode usá-las normalmente depois de a ação preparada ser acionada. Você também pode desistir de sua ação preparada, permitindo que use reações normalmente. Se a condição de acionamento não acontecer, você perde sua ação preparada.<br /><br />Quando você <strong>PREPARAR</strong>, isso é visível e óbvio para observadores (por exemplo, você claramente mira ou prepara sistemas)."
+  },
+  {
+   "title": "Retaliar",
+   "category": "Reação",
+   "description": "Quando <strong>RETALIAR</strong>, você controla e defende o espaço em volta de seu mecha contra incursões inimigas usando suas habilidades de piloto, reflexos ou subsistemas finamente ajustados.<br /><br />Exceto se especificado o contrário, todas as armas possuem 1 de <strong>[AMEAÇA]</strong>.<br /><br />**Retaliar (Reação, 1/rodada)**<br />**Acionamento:** Um personagem hostil começa qualquer movimento (incluindo <strong>[IMPULSIONAR]</strong> e outras ações) dentro da <strong>[AMEAÇA]</strong> de uma das suas armas.<br />**Efeito:** Você imediatamente usa uma arma que acionou <strong>RETALIAR</strong> para <strong>[ALVEJAR]</strong> o personagem hostil como uma <strong>[REAÇÃO]</strong>, antes dele se mover."
+  },
+  {
+   "title": "Ações Livres",
+   "category": "Ação Livre",
+   "description": "Ações livres geralmente são concedidas por sistemas, talentos, equipamento ou <strong>[SOBRECARREGAR]</strong>. Os personagens podem realizar qualquer quantidade de ações livres em seu turno, mas apenas em seu turno, e apenas aquelas concedidas a eles. Ações livres podem sempre ser usadas para fazer ações repetidas.<br /><br />O tipo mais comum de ação livre é um <strong>[PROTOCOLO]</strong>, que é concedida por equipamentos e sistemas e podem ser ativadas ou desativadas apenas no início de um turno. Cada <strong>[PROTOCOLO]</strong> pode ser usado uma vez por turno."
+  },
+  {
+   "title": "Suportar",
+   "category": "Reação",
+   "description": "Quando <strong>SUPORTAR</strong>, você prepara seu mecha contra fogo inimigo.<br /><br />Suportar (Reação, 1/rodada)<br />Acionamento: Você é atingido por um ataque e o dano foi rolado.<br /> Efeito: Você conta como tendo <strong>[RESISTÊNCIA]</strong> a todo dano, <strong>[ENERGIA]</strong>, e [DANO] do ataque acionador e, até o final do seu turno, todos os outros ataques feitos contra você são feitos com +1 <strong>[DIFICULDADE]</strong>.<br /><br />Devido ao estresse de <strong>SUPORTAR</strong>, você não pode usar reações até o final do seu próximo turno. Nesse turno, você só pode usar uma ação rápida — você não pode <strong>[SOBRECARREGAR]</strong>, mover-se normalmente, usar ações completas ou ações livres."
+  },
+  {
+   "title": "Sobrecarregar",
+   "category": "Ação Livre",
+   "description": "Quando <strong>SOBRECARREGAR</strong>, você brevemente leva seu mecha além das especificações de fábrica para receber uma vantagem tática. Momentos de ação intensa não vão taxar muito os sistemas do mecha, mas ação constante além dos limites prescritos tem seu preço.<br /><br />Uma vez por turno, você pode <strong>SOBRECARREGAR</strong> seu mecha, permitindo fazer qualquer ação rápida como uma ação livre — mesmo que sejam ações que já foram feitas neste turno.<br /><br />• Na primeira vez que <strong>SOBRECARREGAR</strong>, você sofre 1 de calor <strong>[CALOR]</strong>.<br />• Na segunda vez que <strong>SOBRECARREGAR</strong>, você sofre 1d3 de calor <strong>[CALOR]</strong>.<br />• Na terceira vez que <strong>SOBRECARREGAR</strong>, você sofre 1d6 de calor <strong>[CALOR]</strong>, e toda vez após isso você sofre 1d6+4 de calor <strong>[CALOR]</strong>.<br /><br />Um <strong>[REPARO COMPLETO]</strong> reinicia essa contagem. Voce pode <strong>SOBRECARREGAR</strong> 1 vez por turno."
+  },
+  {
+   "title": "ATORDOADO",
+   "category": "Condição",
+   "description": "Um mecha Atordoado não pode [Sobrecarregar], se mover ou usar qualquer ação, incluindo ações livres e reações. Pilotos ainda podem [Montar, Desmontar ou Ejetar] de um mecha [Atordoado] e podem usar ações normalmente. Um mecha [Atordoado] tem um máximo de 5 de [Evasão] e automaticamente falha em todos os testes e salvamentos de [Casco] e [Agilidade]."
+  },
+  {
+   "title": "BLOQUEADO",
+   "category": "Condição",
+   "description": "Um personagem Bloqueado não pode: ⬣ Usar comunicação para falar com outros personagens; ⬣ Fazer ataques, exceto [Agarrar], [Improvisar] [Ataque] e [Empurrar];<br> ⬣ Usar reações nem usar ou se beneficiar de ações de programar."
+  },
+  {
+   "title": "DILACERADO",
+   "category": "Condição",
+   "description": "Um personagem [Dilacerado] não se beneficia de [Armadura] ou [Resistência]."
+  },
+  {
+   "title": "IMOBILIZADO",
+   "category": "Condição",
+   "description": "Um personagem Imobilizado não pode fazer nenhum movimento voluntário, embora movimentos involuntários não sejam afetados."
+  },
+  {
+   "title": "IMPEDIDO",
+   "category": "Condição",
+   "description": "Um personagem Impedido sofre +1[DIFICULDADE] em todos os ataques, salvamentos e testes de perícia."
+  },
+  {
+   "title": "LENTO",
+   "category": "Condição",
+   "description": "Um personagem Lento só pode fazer o movimento padrão na sua vez e não pode [Impulsionar] nem realizar movimentos especiais concedidos por talentos, sistemas ou armas."
+  },
+  {
+   "title": "TRAVADO EM MIRA",
+   "category": "Condição",
+   "description": "Personagens hostis podem optar por consumir a condição [Travado em Mira] de um personagem em troca de +1[Precisão] em seu próximo ataque contra esse personagem. [Travado em Mira] também é necessário para usar alguns talentos e sistemas."
+  },
+  {
+   "title": "CAÍDO E APAGADO",
+   "category": "Estado",
+   "description": "Um piloto Caído e Apagado está inconsciente e Atordoado — se sofrer mais dano, ele morrerá. Ele recupera a consciência e metade dos PV quando descansa."
+  },
+  {
+   "title": "DESLIGADO",
+   "category": "Estado",
+   "description": "Quando um mecha está Desligado: ⬣ Todo o calor é dissipado e o estado [EXPOSTO] é removido; ⬣ Qualquer PNH em cascata é estabilizada e não está mais em cascata; ⬣ Quaisquer estados e condições afetando o mecha causados por ações de programar, como Travar Mira, terminam imediatamente. Um mecha Desligado tem [Imunidade] a todas as ações de programar e ataques tecnológicos, incluindo aquelas de personagens aliados. Enquanto está Desligado, um mecha está indefinidamente Atordoado. Nada pode impedir esta condição, e ela permanece até que o mecha deixe de estar Desligado."
+  },
+  {
+   "title": "ENGAJADO",
+   "category": "Estado",
+   "description": "Se um personagem se mover e ficar adjacente a um personagem hostil, ambos recebem o estado Engajado enquanto permanecerem adjacentes um ao outro. Ataques à distância feitos por um personagem [Engajado] sofrem +1[Dificuldade]. Além disso, personagens que fiquem Engajados com alvos de Tamanho igual ou maior durante o curso de um movimento param imediatamente de se mover e pedem qualquer movimento não utilizado."
+  },
+  {
+   "title": "ESCONDIDO",
+   "category": "Estado",
+   "description": "Um personagem Escondido não pode ser alvo de ataques ou ações hostis, não causa engajamento e os inimigos só sabem sua localização aproximada. Atacar, forçar testes de resistência, usar reações, Impulsionar e perder cobertura removem o estado Escondido após serem resolvidos. É possível encontrar alguém Escondido com a ação [Procurar]."
+  },
+  {
+   "title": "EXPOSTO",
+   "category": "Estado",
+   "description": "Um personagem fica Exposto quando lida com um acúmulo de calor descontrolado — sua armadura é enfraquecida pelo superaquecimento, suas saídas de ar estão abertas e suas armas estão se desligando, proporcionando muitos pontos fracos. Todo dano cinético, explosivo ou energético sofrido por um personagem Exposto é duplicado, antes de aplicar quaisquer reduções. Um mecha pode remover Exposto realizando a ação [Estabilizar]."
+  },
+  {
+   "title": "INVISÍVEL",
+   "category": "Estado",
+   "description": "Todos os ataques feitos contra um personagem Invisível, independentemente do tipo, têm 50% de chance de errar por completo, antes mesmo de ser feita a rolagem de ataque. Role um dado ou jogue uma moeda para determinar se o ataque erra. Além disso, um personagem Invisível sempre pode se [Esconder-se], mesmo sem cobertura."
+  },
+  {
+   "title": "PROSTRADO",
+   "category": "Estado",
+   "description": "Ataques contra um alvo Prostrado recebem +1[Precisão]. Além disso, um personagem Prostrado fica [LENTO] e é considerado como se estivesse se movendo em terreno difícil. Um personagem pode remover o estado Prostrado levantando-se em vez de realizar sua movimentação padrão, a menos que esteja [IMOBILIZADO]. Levantar não é considerado uma movimentação, portanto, não aciona [Retaliar] ou outros efeitos"
+  },
+  {
+   "title": "ZONA DE PERIGO",
+   "category": "Estado",
+   "description": "Um personagem está na Zona de Perigo quando metade ou mais da metade do seu calor está preenchido. Ele está sobrecarregado de calor, o que permite alguns ataques, talentos e efeitos."
+  },
+  {
+   "title": "Precisão",
+   "category": "Definição",
+   "description": "Precisão e Dificuldade são modificadores temporários ganhos e perdidos em momentos rápidos e caóticos de ação. Cada ponto de Precisão adiciona 1d6 à rolagem. Precisão e Dificuldade cancelam um ao outro em uma proporção de 1 pra 1. "
+  },
+  {
+   "title": "Dificuldade",
+   "category": "Definição",
+   "description": "Precisão e Dificuldade são modificadores temporários ganhos e perdidos em momentos rápidos e caóticos de ação. Cada ponto de e Dificuldade remove 1d6 da rolagem. "
+  },
+  {
+   "title": "Alcance",
+   "category": "Definição",
+   "description": "O alcance máximo em que uma arma pode ser usada para ataques à distância, medido a partir do personagem que ataca."
+  },
+  {
+   "title": "Ameaça",
+   "category": "Definição",
+   "description": "A distância máxima na qual ataques corpo a corpo e de retaliar podem ser realizados com certas armas, medida a partir do personagem atacante. Todas as armas têm [Ameaça] 1, exceto se especificado o contrário."
+  },
+  {
+   "title": "Armadura",
+   "category": "Estatística",
+   "description": "Todo dano cinético, energético e explosivo é reduzido por uma quantidade igual à [Armadura] do personagem. Mechas não podem ter mais que 4 de [Armadura]."
+  },
+  {
+   "title": "Ataque Tecnológico",
+   "category": "Estatística",
+   "description": "A estatística usada para fazer ataques tecnológicos e realizar a maioria das ações de programar."
+  },
+  {
+   "title": "Brio",
+   "category": "Estatística",
+   "description": "Metade do NL(Nivel do personagem) (arredondada para cima) do personagem, representando sua experiência em combate. Brio fornece bônus para algumas rolagens e características."
+  },
+  {
+   "title": "Calor",
+   "category": "Definição",
+   "description": "O Calor sofrido por um alvo representa dano aos sistemas internos e blindagem do reator. Ele suporta até [Cap. de Calor]."
+  },
+  {
+   "title": "Cap. de Calor",
+   "category": "Definição",
+   "description": "A quantidade de calor que um mecha pode suportar antes de correr o risco de superaquecimento."
+  },
+  {
+   "title": "Cap. de Reparo",
+   "category": "Definição",
+   "description": "A quantidade de vezes que um mecha pode ser reparado por missão."
+  },
+  {
+   "title": "Dano Bônus",
+   "category": "Definição",
+   "description": "Dano extra — cinético, energético ou explosivo — adicionado a ataques corpo a corpo ou à distância. Ataques que atingem mais de um personagem causam apenas metade do dano bônus"
+  },
+  {
+   "title": "Dano",
+   "category": "Definição",
+   "description": "O dano sofrido é subtraído dos [Pontos de Vida] (PV), e pode ser cinético, energético, explosivo ou de queimadura."
+  },
+  {
+   "title": "Defesa-E",
+   "category": "Estatística",
+   "description": "A estatística usada para se defender contra ataques tecnológicos."
+  },
+  {
+   "title": "Estresse",
+   "category": "Definição",
+   "description": "Todos os mechas dos PJs (e alguns PNJs) têm uma quantidade de Estresse, (geralmente 4 para PJs). Esta é a quantidade de dano de estresse que eles podem sofrer antes de ocorrer um derretimento do reator. Quando os mechas excedem sua [Cap. de Calor], eles sofrem 1 de dano de estresse e fazem um teste de superaquecimento."
+  },
+  {
+   "title": "Estrutura",
+   "category": "Definição",
+   "description": "Todos os mechas dos PJs (e alguns PNJs) têm uma certa quantidade de Estrutura (geralmente 4 para PJs). Esta é a quantidade de dano de estrutura que eles podem sofrer antes de serem destruídos. Quando os mechas atingem 0 PV, eles sofrem 1 de dano de estrutura e fazem um teste de estrutura."
+  },
+  {
+   "title": "Evasão",
+   "category": "Estatística",
+   "description": "A estatística usada para se defender contra a maioria dos ataques corpo a corpo e à distância."
+  },
+  {
+   "title": "Imunidade",
+   "category": "Definição",
+   "description": "Um personagem com [Imunidade] ignora todo o dano e efeitos do que é imune."
+  },
+  {
+   "title": "Personagem",
+   "category": "Definição",
+   "description": "Um personagem jogador (PJ), personagem não jogador (PNJ) ou qualquer outra entidade capaz de agir (ou reagir) independentemente, como Drones."
+  },
+  {
+   "title": "Pontos de Vida (PV)",
+   "category": "Estatística",
+   "description": "A quantidade de dano que um piloto pode receber antes de ficar [Caído e Apagado], e a quantidade de dano que um mecha pode receber antes de sofrer dano estrutural."
+  },
+  {
+   "title": "Resistência",
+   "category": "Definição",
+   "description": "Um personagem com Resistência reduz pela metade o dano, calor ou outro tipo de dano depois da [Armadura] ser aplicada. Resistência ao mesmo tipo de dano não se acumula, aplica-se somente a maior."
+  },
+  {
+   "title": "Sensores",
+   "category": "Estatística",
+   "description": "A distância máxima em que você pode detectar outros personagens, fazer ataques tecnológicos, [Travar Mira] e usar alguns sistemas."
+  },
+  {
+   "title": "Tamanho",
+   "category": "Estatística",
+   "description": "A quantidade de espaços ocupados ou controlados por um personagem ou objeto. Por exemplo, mechas de Tamanho 2 ocupam uma área de 2 espaços em cada lado e 2 espaços de altura. Tamanho não necessariamente representa dimensões físicas precisas."
+  },
+  {
+   "title": "Velocidade",
+   "category": "Estatística",
+   "description": "A quantidade de espaços que um personagem pode se mover com um movimento padrão ou com Impulsionar."
+  },
+  {
+    "title": "Casco",
+    "category": "Perícia de Mecha",
+    "description": "descreve a capacidade de construir e pilotar mechas duráveis, com estruturas confiáveis que podem levar socos e prosseguir.<br> Role Casco quando: atravessar ou pulverizar obstáculos, veículos ou prédios; levantar, arrastar, empurrar ou arremessar um peso enorme; segurar ou lutar corpo a corpo com mechas, naves espaciais ou criaturas do tamanho de mechas; resistir a uma quantidade enorme de força; ou ficar de pé em condições climáticas cataclísmicas."
+  },
+  {
+    "title": "Agilidade",
+    "category": "Perícia de Mecha",
+    "description": "descreve sua capacidade de construir e pilotar mechas rápidos e evasivos.<br> Role Agilidade quando: caçar, perseguir ou fugir comincrível velocidade; realizar acrobacias em seu mecha; se esconder ou se mover em silêncio; realizar uma façanha de fina destreza manual com seu mecha; ou desviar docaminho do perigo."
+  },
+  {
+    "title": "Sistemas",
+    "category": "Perícia de Mecha",
+    "description": "descreve sua capacidade de construir e pilotar mechas avançados com poderosa capacidade de guerra eletrônica.<br> Role Sistemas quando: infiltrar sistemas e alvos fortalecidos com sistemas poderosos, incluindo outros mechas; fortalecer ou suprimir um sinal; engajar em guerra eletrônica; escanear ou analisar informação; fortalecer ou enfraquecer os sistemas eletrônicos de um veículo, mecha, nave espacial ou bases; interagir em segurança com formas de vida eletrônicas; ou analisar a natureza não familiar de sistemas eletrônicos."
+  },
+  {
+    "title": "Engenharia",
+    "category": "Perícia de Mecha",
+    "description": "descreve sua capacidade de construir e pilotar mechas com reatores, suprimentos e sistemas de suporte eficazes.<br> Role Engenharia quando: levar seu mecha além dos limites; aguentar condições extremas como calor, frio, vácuo ou radiação; usar o reator do seu mecha como uma forja; manter seu mecha rodando bem após o seu ponto de quebra ou por quantidades extremas de tempo; viajar ou se mover com segurança por condições perigosas ou hostis; fortalecer a saída do reator de outros mechas, naves espaciais ou bases; ou conservar e usar com eficácia munição, energia ou outros recursos."
+  },
+  {
+    "title": "Encaixe Principal",
+    "category": "Encaixe",
+    "description": "pode levar uma arma Principal ou Auxiliar."
+  },
+  {
+    "title": "Encaixe Pesado",
+    "category": "Encaixe",
+    "description": "pode levar uma arma Pesada, Principal ou Auxiliar."
+  },
+  {
+    "title": "Encaixe Auxiliar/Auxiliar",
+    "category": "Encaixe",
+    "description": "pode levar até duas armas Auxiliares."
+  },
+  {
+    "title": "Encaixe Principal/Auxiliar",
+    "category": "Encaixe",
+    "description": "pode levar uma arma Principal e uma arma Auxiliar, ou duas armas Auxiliares."
+  },
+  {
+    "title": "Encaixe Flexível",
+    "category": "Encaixe",
+    "description": "pode levar uma arma Principal ou até duas armas Auxiliares."
+  },
+  {
+    "title": "Encaixe Integrado",
+    "category": "Encaixe",
+    "description": "é projetado ao redor de uma arma específica, imbuída no Chassi. Ele automaticamente inclui a arma listada, que não pode ser destruída, removida, trocada ou modificada de nenhum modo."
+  },
+  {
+    "title": "Armas Superpesadas",
+    "category": "Arma",
+    "description": "que são especialmente grandes, exigem tanto um encaixe Pesado quanto um outro encaixe de qualquer tamanho."
+  },
+  {
+    "title": "Pontos de Vida",
+    "category": "Definição",
+    "description": "é quanto dano o personagem pode sofrer antes de cair. Pilotos possuem as seguintes estatísticas: PV: 6 + Brio. <br> Como o seu piloto, seu mecha tem pontos de vida (PV). Seu mecha, entretanto, não é destruído quando chega a 0 PV. Mechas têm 4 de Estrutura — quando chegam a 0 PV, eles sofrem 1 de dano estrutural, e seus PV se reiniciam. Quando perdem estrutura dessa forma, mechas precisam fazer um teste de dano estrutural especial e sofrer uma consequência baseada na rolagem. A maioria dos mechas possuem 4 de Estrutura e são destruídos quando atingem 0 de Estrutura."
+  },
+  {
+    "title": "Canhão",
+    "category": "Arma",
+    "description": "Armas de grosso calibre, úteis para causar danos graves aos inimigos. Onde falta precisão, geralmente compensam com poder de fogo."
+  },
+  {
+    "title": "Corpo a Corpo",
+    "category": "Arma",
+    "description": "Espadas, machados, ferramentas elétricas e outras armas de combate corpo a corpo em escala de mecha. A força bruta de um mecha pode transformar até mesmo ferramentas rudimentares em um risco a ser considerado."
+  },
+  {
+    "title": "CQR (Combate à Queima Roupa)",
+    "category": "Arma",
+    "description": "Armas projetadas para combate em curto alcance, incluindo pistolas, espingardas, lança-chamas e armas mais exóticas como uma arma de pregos. Geralmente têm alcance curto, mas são melhores para reagir rapidamente a novas ameaças."
+  },
+  {
+    "title": "Fuzil",
+    "category": "Arma",
+    "description": "Armas robustas com bom alcance e potencial para retardar movimento."
+  },
+  {
+    "title": "Lançador",
+    "category": "Arma",
+    "description": "Armas que disparam mísseis, granadas ou outros projéteis."
+  },
+  {
+    "title": "Nexo",
+    "category": "Arma",
+    "description": "Reservatórios e projetores para enxames de drones armados autopropelidos."
+  },
+  {
+    "title": "TIPO DE DANO",
+    "category": "Definição",
+    "description": "As armas causam um dos quatro tipos de dano — explosivo, cinético, energético e [Queimadura]. Elas também podem causar dano bônus e calor."
+  },
+  {
+    "title": "Calor X (ALVO)",
+    "category": "Dano",
+    "description": "Em um acerto, esta arma ou sistema causa X calor a seu alvo."
+  },
+  {
+    "title": "Queimadura X",
+    "category": "Dano",
+    "description": "Em um acerto, esta arma causa X dano de queimadura em seu alvo. O alvo imediatamente sofre esse dano por [Queimadura], ignorando [Armadura], e recebe X marcadores de queimadura, somando-se a qualquer marcador de Queimadura já existente. No final do seu turno, personagens com marcadores de queimadura fazem um teste de Engenharia. Em caso de sucesso, eles removem todos os marcadores de queimadura; em caso de falha, sofrem uma quantidade de dano igual ao total de marcadores de queimadura."
+  },
+  {
+    "title": "ÁREAS",
+    "category": "Área",
+    "description": "Algumas armas e sistemas têm áreas de ataque especiais: [Cone], [Emanação], [Explosão] e [Linha]. Esses ataques afetam todos os alvos dentro de uma área definida e exigem uma rolagem de ataque separada para cada alvo. O dano é calculado apenas uma vez, e o dano bônus é reduzido pela metade se houver vários alvos afetados."
+  },
+  {
+    "title": "Cone",
+    "category": "Área",
+    "description": "Ataques feitos com esta arma afetam personagens que estiverem dentro de um Cone, com de X espaços de comprimento e X espaços de largura em seu ponto mais distante. O cone começa com 1 espaço de largura."
+  },
+  {
+    "title": "Linha",
+    "category": "Área",
+    "description": "Ataques feitos com esta arma afetam personagens em uma Linha reta, com X espaços de comprimento."
+  },
+  {
+    "title": "Emanação",
+    "category": "Área",
+    "description": "Ataques feitos com esta arma afetam personagens que estiverem dentro de um raio de X espaços, centrado e incluindo o espaço ocupado pelo usuário (ou alvo). Se a Emanação for um ataque, o usuário ou alvo não é afetado pelo ataque (exceto se especificado o contrário). Cobertura e linha de visão são calculadas a partir do personagem. Se um efeito de Emanação for persistente, ele se move com o personagem como seu centro."
+  },
+  {
+    "title": "Explosão",
+    "category": "Área",
+    "description": "Ataques feitos com esta arma afetam personagens que estiverem dentro de um raio de X espaços, a partir de um ponto dentro do [Alcance] e linha de visão. A cobertura e a linha de visão para o ataque são calculadas a partir do centro da explosão, e não da posição do atacante."
+  },
+  {
+    "title": "Ameaça X",
+    "category": "Tag",
+    "description": "Esta arma pode ser usada para fazer ataques de Retaliar em um raio de X espaços. Se for uma arma corpo a corpo, ela pode ser usada para fazer ataques corpo a corpo em um raio de X espaços."
+  },
+  {
+    "title": "Arco",
+    "category": "Tag",
+    "description": "Esta arma pode ser disparada sobre obstáculos, geralmente lançando um projétil em arco. Ataques feitos com esta arma não exigem linha de visão, desde que seja possível traçar um caminho até o alvo; no entanto, ainda são afetados por cobertura."
+  },
+  {
+    "title": "Arremessável X",
+    "category": "Tag",
+    "description": "Esta arma corpo a corpo pode ser arremessada em alvos que estejam dentro de um raio de X espaços. Os ataques arremessados seguem as regras para ataques corpo a corpo, mas são afetados por cobertura; além disso, uma arma arremessada cai em um espaço adjacente ao seu alvo e precisa ser recuperada como uma ação livre enquanto estiver adjacente a ela antes de poder ser usada novamente."
+  },
+  {
+    "title": "Artilharia",
+    "category": "Tag",
+    "description": "Esta arma só pode ser disparada antes que o usuário se mova ou tome qualquer outra ação em seu turno, exceto Protocolos. O usuário ainda pode agir e se mover normalmente após atacar. Além disso, devido ao seu tamanho, esta arma não pode ser usada contra alvos engajados com o mecha do usuário e não pode ser usada para Retaliar."
+  },
+  {
+    "title": "Blindagem",
+    "category": "Tag",
+    "description": "Este sistema fornece PV que desaparecem no final da cena ou quando uma condição especificada é atendida. O usuário mantém apenas o valor mais alto de Blindagem aplicado; ele não se acumula. Por exemplo, se um sistema fornecer Blindagem 5 e o usuário recebe outro efeito que fornecer Blindagem 7, ele receberia Blindagem 7. O dano é aplicado primeiro à Blindagem e depois aos PV. A Blindagem pode elevar os PV de um personagem acima do máximo. Ele não se beneficia de cura, mas por outro lado se beneficia normalmente de qualquer coisa que afete os PV e o dano (ou seja, redução, armadura etc.)."
+  },
+  {
+    "title": "Confiável X",
+    "category": "Tag",
+    "description": "Esta arma apresenta um grau de autocorreção ou é simplesmente poderosa o suficiente para causar dano até mesmo com um golpe superficial. Ela sempre causa X de dano, mesmo que erre o alvo ou role menos no dano. O dano Confiável herda outras tags (como PF) e o tipo de dano base, mas não tags que exigem um acerto, como Repulsão."
+  },
+  {
+    "title": "Exagerado",
+    "category": "Tag",
+    "description": "Ao rolar o dano com esta arma, qualquer dado de dano que cair em 1 faz com que o atacante sofra 1heat e role o dado novamente. 1s adicionais continuam a acionar esse efeito."
+  },
+  {
+    "title": "Guiado",
+    "category": "Tag",
+    "description": "Esta arma tem uma forma limitada de autodirecionamento e propulsão interna, permitindo que ela siga caminhos complicados até o seu alvo. Desde que seja possível traçar um caminho até o alvo, esta arma ignora cobertura e não requer linha de visão."
+  },
+  {
+    "title": "Impreciso",
+    "category": "Tag",
+    "description": "Ataques feitos com esta arma sofrem +[Dificuldade]."
+  },
+  {
+    "title": "Inteligente",
+    "category": "Tag",
+    "description": "Esta arma tem sistemas de autodirecionamento, projéteis autopropelidos ou até mesmo munição nanorrobótica. Esses sistemas são eficazes o suficiente para que seus ataques não possam ser simplesmente esquivados, eles devem ser desarranjados ou bloqueados. Por causa disso, todos os ataques feitos com esta arma, incluindo ataques corpo a corpo e à distância, usam a Defesa-E do alvo em vez de Evasão. Alvos sem Defesa-E contam como tendo Defesa-E 8."
+  },
+  {
+    "title": "Perfurante (PF)",
+    "category": "Tag",
+    "description": "O dano causado por esta arma ignora Armadura."
+  },
+  {
+    "title": "Preciso",
+    "category": "Tag",
+    "description": "Ataques feitos com esta arma recebem +1[Precisão]."
+  },
+  {
+    "title": "Recarga",
+    "category": "Tag",
+    "description": "Esta arma precisa ser recarregada após cada uso. Mechas podem recarregar com a ação [Estabilizar] e alguns sistemas."
+  },
+  {
+    "title": "Repulsão X",
+    "category": "Tag",
+    "description": "Em um acerto, o usuário pode optar por empurrar o alvo X espaços em linha reta diretamente para longe do ponto de origem (por exemplo, o mecha atacante ou o centro de uma [Explosão]). Múltiplos efeitos de Repulsão se acumulam. Isso significa que um ataque feito com uma arma de [Repulsão] 1 e um talento que concede Repulsão 1 é considerado como tendo Repulsão 2"
+  }
+
+ ],
+"table_structure": [
+  {
+    "rol":"5-6",
+    "name":"Golpe de Raspão",
+    "discption":"Sistemas de emergências se ativam e estabilizam seu mecha, mas ele fica [Impedido] até o final do seu próximo turno."
+  },
+  {
+    "rol":"2-4",
+    "name":"Trauma do Sistema",
+    "discption":"Partes do seu mecha são arrancadas pelo dano. <br> Role 1d6. Em um 1–3, todas as armas de um encaixe à sua escolha são destruídas; em um 4–6, um sistema à sua escolha é destruído. Sistemas e armas Limitados que estão sem cargas não são escolhas válidas. Se não existem escolhas válidas disponíveis, ele se torna o outro resultado. Se não existem sistemas ou armas válidos, o resultado se torna um Acerto Direto."
+  },
+  {
+    "rol":"1",
+    "name":"Acerto Direto",
+    "discption":"O resultado depende do restante de Estrutura do seu mecha:<br> 3+ Estrutura: Seu mecha fica Atordoado até o final do seu próximo turno. <br> 2 Estrutura: Role um teste de Casco. Em um sucesso, seu mecha fica Atordoado até o final do seu próximo turno. Em uma falha, seu mecha é destruído.<br> 1 Estrutura: Seu mecha é destruído."
+  },
+  {
+    "rol":"Múltiplos 1s",
+    "name":"Acerto Devastador",
+    "discption":"Seu mecha está além de reparos — ele é destruído. Você pode sair dele normalmente."
+  }
+],
+"table_stress": [
+  {
+    "rol":"5-6",
+    "name":"Desligamento de Emergência",
+    "discption":"Os sistemas de resfriamento do seu mecha conseguem conter o calor crescente; entretanto, seu mecha fica [Impedido] até o final de seu próximo turno."
+  },
+  {
+    "rol":"2-4",
+    "name":"Gerador Desestabilizado",
+    "discption": "O gerador fica instável, começando a ejetar jatos de plasma. Seu mecha fica Exposto, sofrendo o dobro de dano de cinetico, explosivo e de energia até o estado ser removido"
+  },
+  {
+    "rol":"1",
+    "name":"Fusão",
+    "discption":"O resultado depende da quantidade restante de Estresse:<br> 3+ Estresse: Seu mecha fica [Exposto].<br> 2 Estresse: Role um teste de Engenharia. Em um sucesso, seu mecha fica [Exposto]; em uma falha, ele sofre uma fusão do reator depois de 1d6 turnos seus (rolado peloMJ). Uma fusão do reator pode ser impedida refazendo o teste de Engenhariacomo uma ação livre.<br> 1 Estresse: Seu mecha sofre uma fusão de reator no final do seu próximo turno."
+  },
+  {
+    "rol":"Múltiplos 1s",
+    "name":"Fusão Irreversível",
+    "discption":"O reator fica em estado crítico — seu mecha sofre uma fusão de reator no final do seu próximo turno."
+  }
+]
+}
+  
