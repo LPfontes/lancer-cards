@@ -1,13 +1,13 @@
 <div class="main">
   <!-- Menu de Navegação de Categorias -->
   <nav class="category-nav">
-    @for (category of categories; track category) {
+    @for (category of Pcategories; track category) {
       <button class="nav-link" (click)="showCategory(category)" >{{ category }}</button>
     }
   </nav>
 
   @for (category of categories; track category) {
-    <div class="category_item" [id]="getSafeId(category)" [class.visible]="selectedCategory === category">
+    <div class="category_item" [id]="getSafeId(category)" [class.visible]="isCategoryVisible(category)">
       <h2 class="category_title">{{ category }}</h2>
 
       <div class="cards_category_list">
@@ -23,14 +23,22 @@
   <!-- Modal Structure -->
   @for (card of selectedCards; track card; let i = $index) {
     <div class="modal-overlay" [style.z-index]="1000 + i" (click)="i === selectedCards.length - 1 && onOverlayClick($event)">
-      <div class="modal-content" [style.transform]="'translate(-50%, -50%)'">
-        <button class="modal-close" (click)="closeModal()">&times;</button>
-        <h2 class="modal_title">{{ card.title }}</h2>
-        <div class="modal_body">
-          <div class="card_text" (click)="handleKeywordClick($event)">
-            <p [innerHTML]="card.description | keywordLink"></p>
-
+      <div class="brutalist-card">
+        <div class="brutalist-card__header">
+          <div class="brutalist-card__icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+              ></path>
+            </svg>
           </div>
+          <div class="brutalist-card__alert">{{ card.title }}</div>
+        </div>
+        <div class="brutalist-card__message" (click)="handleKeywordClick($event)">
+          <p [innerHTML]="card.description | keywordLink"></p>
+        </div>
+        <div class="brutalist-card__actions">
+          <a class="brutalist-card__button brutalist-card__button--read" href="#" (click)="$event.preventDefault(); closeModal()">Okay</a>
         </div>
       </div>
     </div>
