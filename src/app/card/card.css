@@ -32,13 +32,6 @@ button {
   text-align: left;
 }
 
-@media (max-width: 700px) {
-.cards_category_list {
-    grid-template-columns: repeat(3, 1fr);
-  } 
-}
-
-
 .cards_category_list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -53,7 +46,7 @@ button {
   border: var(--border-width-sm) solid var(--color-border-dark);
   border-radius: var(--border-radius-sm);
   padding: 1.5vh 1.25vw;
-  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-size: clamp(1.2vw, 1.5vw, 1.5rem);
   font-weight: 600;
   color: var(--color-text-light);
   cursor: pointer;
@@ -252,8 +245,8 @@ hr {
   border: var(--border-width-sm) solid var(--color-border-dark);
   transition: background-color 0.2s ease-in-out, transform 0.2s ease; /* Transições mantidas */
   font-weight: 600;
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-  width: clamp(12rem, 15vw, 16rem);
+  font-size: clamp(1.2vw, 2.5vw, 1.5vw);
+  width: clamp(10vw, 13vw, 16vw);
 }
 
 .nav-link:hover {
@@ -321,7 +314,7 @@ hr {
 
 .brutalist-card__message {
   margin-top: 1.5vh; /* Usando vh para margin */
-  font-size: clamp(1rem, 1.8vw, 1.2rem); /* Usando clamp com vw para font-size */
+  font-size: clamp(2.5vh, 1.8vw, 1.2rem); /* Usando clamp com vw para font-size */
   padding-bottom: 1.5vh; /* Usando vh para padding */
   overflow-y: auto;
   flex-grow: 1;
@@ -375,3 +368,29 @@ hr {
   transform: translate(5px, 5px);
   box-shadow: none;
 }
+
+@media (max-width: 700px) {
+  .main {
+      padding: 1vw 4vw;
+
+  }
+  .category_title{
+    font-size: clamp(3vw, 4.5vw, 5.5vw);
+  }
+  .cards_category_list {
+      grid-template-columns: repeat(2, 1fr);
+      
+    } 
+    .action-button{
+      height: 20vw;
+      font-size: clamp(3vw, 4.5vw, 5.5vw);
+
+    }
+    .nav-link {
+      width: clamp(20vw, 30vw, 40vw);
+      font-size: clamp(3vw, 4vw, 5.5vw);
+    }
+    .brutalist-card {
+      max-width: fit-content;
+    }
+  }

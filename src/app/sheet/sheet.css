@@ -55,8 +55,13 @@
 
 /* --- Media Query para Telas Pequenas --- */
 @media (max-width: 700px) {
+  .turn_summary {
+      padding: 10px;
+  }
+  
   .turn_block {
     padding: 16px 12px;
+    margin-bottom: 10px;
   }
   
   .block_icon svg {
@@ -71,7 +76,10 @@
     width: 25px;
 
 }
-
+.turn_blocks_container {
+      display: inline-block;
+      margin: 0 auto;
+    }
 
 }
 .block--action { background-color: var(--color-secondary); } /* Azul */
