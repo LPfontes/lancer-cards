@@ -43,7 +43,7 @@
         {
           "title": "Sobrecarregar",
           "category": "Ação Livre",
-          "description": "Quando <strong>Sobrecarregar</strong>, você brevemente leva seu mecha além das especificações de fábrica para receber uma vantagem tática.</br>Momentos de ação intensa não vão taxar muito os sistemas do mecha, mas ação constante além dos limites prescritos tem seu preço.</br>Uma vez por turno, você pode <strong>Sobrecarregar</strong> seu mecha, permitindo fazer qualquer ação rápida como uma [Ação Livre] — mesmo que sejam ações que já foram feitas neste turno.</br>⬣ Na primeira vez que <strong>Sobrecarregar</strong>, você sofre 1 de Calor <strong>[Calor]</strong>.</br>⬣ Na segunda vez que <strong>Sobrecarregar</strong>, você sofre 1d3 de Calor <strong>[Calor]</strong>.</br>⬣ Na terceira vez que <strong>Sobrecarregar</strong>, você sofre 1d6 de [Calor] <strong>[Calor]</strong>, e toda vez após isso você sofre 1d6+4 de <strong>[Calor]</strong>.</br>Um <strong>[Reparo Completo]</strong> reinicia essa contagem.</br>Voce pode <strong>Sobrecarregar</strong> 1 vez por turno."
+          "description": "Quando <strong>Sobrecarregar</strong>, você brevemente leva seu mecha além das especificações de fábrica para receber uma vantagem tática.</br>Momentos de ação intensa não vão taxar muito os sistemas do mecha, mas ação constante além dos limites prescritos tem seu preço.</br>Uma vez por turno, você pode <strong>Sobrecarregar</strong> seu mecha, permitindo fazer qualquer ação rápida como uma [Ação Livre] — mesmo que sejam ações que já foram feitas neste turno.</br>⬣ Na primeira vez que <strong>Sobrecarregar</strong>, você sofre 1 de <strong>[Calor]</strong>.</br>⬣ Na segunda vez você sofre 1d3 de <strong>[Calor]</strong>.</br>⬣ Na terceira vez você sofre 1d6 de <strong>[Calor]</strong>, e toda vez após isso você sofre 1d6+4 de <strong>[Calor]</strong>.</br>Um <strong>[Reparo Completo]</strong> reinicia essa contagem.</br>Voce pode <strong>Sobrecarregar</strong> 1 vez por turno."
         }
       ],
       "Ações Rápidas": [
@@ -75,9 +75,9 @@
         {
           "title": "Esconder",
           "category": "Ação Rápida",
-          "description": "Quando <strong>Esconder</strong>, você obscurece a posição do seu mecha para se reposicionar, evitar sofrer tiros, reparar ou emboscar.</br>Para <strong>Esconder</strong>, você não pode estar <strong>[Engajado]</strong> e precisa estar fora da linha de visão de um inimigo, obscurecido por cobertura suficiente ou Invisível.</br>Se conseguir <strong>Esconder</strong> enquanto atende a um desses critérios, você recebe o estado de <strong>[Escondido]</strong>.</br><strong>[Cobertura Pesada]</strong> é o suficiente para <strong>Esconder</strong> enquanto ela for grande o suficiente para te ocultar, mas cobertura leve só é suficiente se você estiver completamente dentro de una área ou zona que te garanta cobertura leve — muitos [Sistemas] e [Talentos] que fornecem cobertura leve ou o bom e velho obscurecimento não proveem o suficiente para se Esconder atrás!<br /><br />Se estiver <strong>[Invisível]</strong>, você sempre pode <strong>Esconder</strong>, independente de cobertura, a menos que esteja <strong>[Engajado]</strong>.</br>A localização exata de alvos <strong>[Escondidos]</strong> não pode ser identificada e eles não podem ser visados diretamente por ataques ou ações hostis, mas eles ainda podem ser atingidos por ataques que afetem uma área.</br>Mesmo que os <strong>[PNJs]</strong> não possam localizar um Personagem <strong>[Escondido]</strong>, eles ainda podem saber uma localização aproximada.</br>Então, um <strong>[PNJ]</strong> pode descarregar um lança-chamas em uma área mesmo que não saiba exatamente onde o <strong>PJ</strong> <strong>[Escondido]</strong> está à espreita.</br>Adicionalmente, outros personagens ignoram engajamento com você enquanto você estiver <strong>[Escondido]</strong> — assume-se que você está tentando se manter furtivo.</br>Você para de ficar <strong>[Escondido]</strong> se fizer um ataque (corpo a corpo, à distância ou tecnológico) ou se o seu mecha fizer uma ação hostil (como forçar um alvo a fazer um salvamento).</br>Usar <strong>[Impulsionar]</strong> ou reações com seu mecha também faz com que você deixe de estar <strong>[Escondido]</strong>.</br>Outras ações podem ser usadas normalmente.</br>Você também perde imediatamente o estado <strong>[Escondido]</strong> se a sua cobertura desaparecer ou for destruída, ou se você perder cobertura devido a linha de visão (por exemplo, se um mecha pular por cima de um muro e agora consegue traçar uma linha ininterrupta até você).</br>Se estiver se escondendo enquanto está <strong>[Invisível]</strong>, você perde <strong>[Escondido]</strong> quando deixar de estar <strong>[Invisível]</strong>, a menos que esteja em uma cobertura."
+          "description": "Quando <strong>Esconder</strong>, você obscurece a posição do seu mecha para se reposicionar, evitar sofrer tiros, reparar ou emboscar.</br>Para <strong>Esconder</strong>, você não pode estar <strong>[Engajado]</strong> e precisa estar fora da linha de visão de um inimigo, obscurecido por cobertura suficiente ou [Invisível].</br>Se conseguir <strong>Esconder</strong> enquanto atende a um desses critérios, você recebe o estado de <strong>[Escondido]</strong>.</br><strong>[Cobertura Pesada]</strong> é o suficiente para <strong>Esconder</strong> enquanto ela for grande o suficiente para te ocultar, mas cobertura leve só é suficiente se você estiver completamente dentro de una área ou zona que te garanta cobertura leve — muitos [Sistemas] e [Talentos] que fornecem cobertura leve ou o bom e velho obscurecimento não proveem o suficiente para se Esconder atrás!<br /><br />Se estiver <strong>[Invisível]</strong>, você sempre pode se <strong>Esconder</strong>, independente de cobertura, a menos que esteja <strong>[Engajado]</strong>."
         },
-        {
+          {
           "title": "Improvisar Ataque",
           "category": "Ação Rápida",
           "description": "Quando <strong>Improvisar Ataque</strong>, você ataca com a coronha de um fuzil, punho ou outra arma corpo a corpo improvisada.</br>Você pode usar qualquer coisa desde a coronha de uma arma a uma laje de concreto ou um pedaço de placa de Casco — a descrição do ataque cabe a você!<br /><br />Para <strong>Improvisar Ataque</strong>, faça um Ataque Corpo a Corpo contra um alvo adjacente.</br>Se for bem-sucedido, ele sofre 1d6 [Dano]."
@@ -95,7 +95,7 @@
         {
           "title": "Procurar",
           "category": "Ação Rápida",
-          "description": "Quando <strong>Procurar</strong>, você tenta identificar personagens Escondidos.</br>Para <strong>Procurar</strong> em um mecha, escolha um Personagem ao [Alcance] dos <strong>[Sensores]</strong> que você suspeite estar <strong>[Escondido]</strong> e faça um teste disputado de <strong>[Sistemas]</strong> contra a <strong>[Agilidade]</strong> dele.</br>Para <strong>Procurar</strong> quando estiver sem um mecha, faça um teste disputado de perícia, adicionando os bônus de seus gatilhos normalmente.</br>Isso pode ser usado para revelar personagens dentro de <strong>[Alcance] 5</strong>.</br>Após um Personagem <strong>[Escondido]</strong> ser encontrado usando <strong>Procurar</strong>, ele imediatamente deixa de estar <strong>[Escondido]</strong> e pode ser localizado nortalmalmente por qualquer Personagem."
+          "description": "Quando <strong>Procurar</strong>, você tenta identificar personagens escondidos.</br>Para <strong>Procurar</strong> em um mecha, escolha um Personagem ao [Alcance] dos <strong>[Sensores]</strong> que você suspeite estar <strong>[Escondido]</strong> e faça um teste disputado de <strong>[Perícia Sistemas]</strong> contra a <strong>[Agilidade]</strong> dele.</br>Para <strong>Procurar</strong> quando estiver sem um mecha, faça um teste disputado de perícia, adicionando os bônus de seus gatilhos normalmente.</br>Isso pode ser usado para revelar personagens dentro de <strong>[Alcance] 5</strong>.</br>Após um Personagem <strong>[Escondido]</strong> ser encontrado usando <strong>Procurar</strong>, ele imediatamente deixa de estar <strong>[Escondido]</strong> e pode ser localizado nortalmalmente por qualquer Personagem."
         },
         {
           "title": "Programar Rápido",
@@ -153,7 +153,7 @@
         {
           "title": "Suportar",
           "category": "Reação",
-          "description": "Quando <strong>Suportar</strong>, você prepara seu mecha contra fogo inimigo.</br><br />Acionamento: Você é atingido por um ataque e o Dano foi rolado.</br></br>Efeito: Você conta como tendo <strong>[Resistência]</strong> a todo Dano, <strong>[]</strong>, e [Dano] do ataque acionador e, até o final do seu turno, todos os outros ataques feitos contra você são feitos com +1 <strong>[Dificuldade]</strong>.</br>Devido ao [Estresse] de <strong>Suportar</strong>, você não pode usar reações até o final do seu próximo turno.</br>Nesse turno, você só pode usar uma ação rápida — você não pode <strong>[Sobrecarregar]</strong>, mover-se normalmente, usar ações completas ou Ações Livres."
+          "description": "Quando <strong>Suportar</strong>, você prepara seu mecha contra fogo inimigo.</br><br />Acionamento: Você é atingido por um ataque e o Dano foi rolado.</br></br>Efeito: Você conta como tendo <strong>[Resistência]</strong> a todo Dano, <strong>[Energetico]</strong>, e [Dano] do ataque acionador e, até o final do seu turno, todos os outros ataques feitos contra você são feitos com +1 <strong>[Dificuldade]</strong>.</br>Devido ao [Estresse] de <strong>Suportar</strong>, você não pode usar reações até o final do seu próximo turno.</br>Nesse turno, você só pode usar uma [Ação Rápida] — você não pode <strong>[Sobrecarregar]</strong>, mover-se normalmente, usar Ações Completas ou Ações Livres."
         }
       ]
     }
@@ -162,12 +162,12 @@
         {
     "title": "Atordoado",
     "category": "Condição",
-    "description": "Um mecha Atordoado não pode [Sobrecarregar], se mover ou usar qualquer ação, incluindo Ações Livres e reações.</br>Pilotos ainda podem [Montar, Desmontar ou Ejetar] de um mecha [Atordoado] e podem usar ações normalmente.</br>Um mecha [Atordoado] tem um máximo de 5 de [Evasão] e automaticamente falha em todos os testes e salvamentos de [Casco] e [Agilidade]."
+    "description": "Um mecha Atordoado não pode [Sobrecarregar], se mover ou usar qualquer ação, incluindo Ações Livres e reações.</br>Pilotos ainda podem [Montar, Desmontar e Ejetar] de um mecha Atordoado e podem usar ações normalmente.</br>Um mecha Atordoado tem um máximo de 5 de [Evasão] e automaticamente falha em todos os testes e salvamentos de [Casco] e [Agilidade]."
     },
     {
     "title": "Bloqueado",
     "category": "Condição",
-    "description": "Um Personagem Bloqueado não pode:<br />⬣ Usar comunicação para falar com outros personagens;<br />⬣ Fazer ataques, exceto [Agarrar], [Improvisar] [Ataque] e [Empurrar];<br/>⬣ Usar reações nem usar ou se beneficiar de ações de programar."
+    "description": "Um Personagem Bloqueado não pode:<br />⬣ Usar comunicação para falar com outros personagens;<br />⬣ Fazer ataques, exceto [Agarrar], [Improvisar Ataque] e [Empurrar];<br/>⬣ Usar reações nem usar ou se beneficiar de ações de programar."
     },
     {
     "title": "Dilacerado",
@@ -324,7 +324,7 @@
     {
       "title": "Pontos de Vida",
       "category": "Definição",
-      "description": "É quanto Dano o Personagem pode sofrer antes de cair.</br>Pilotos possuem as seguintes estatísticas: PV: 6 + [Brio].</br><br/>Como o seu piloto, seu mecha tem Pontos de Vida (PV).</br>Seu mecha, entretanto, não é destruído quando chega a 0 PV.</br>Mechas têm 4 de Estrutura — quando chegam a 0 PV, eles sofrem 1 de Dano Estrutural, e seus PV se reiniciam.</br>Quando perdem Estrutura dessa forma, mechas precisam fazer um teste de Dano Estrutural especial e sofrer uma consequência baseada na rolagem.</br>A maioria dos mechas possuem 4 de Estrutura e são destruídos quando atingem 0 de Estrutura."
+      "description": "É quanto Dano o Personagem pode sofrer antes de cair.</br>Pilotos possuem as seguintes estatísticas: PV: 6 + [Brio].</br><br/>Como o seu piloto, seu mecha tem Pontos de Vida (PV).</br>Seu mecha, entretanto, não é destruído quando chega a 0 PV.</br>Mechas têm 4 de Estrutura — quando chegam a 0 PV, eles sofrem 1 de Dano [Estrutural], e seus PV se reiniciam.</br>Quando perdem [Estrutura] dessa forma, mechas precisam fazer um teste de [Dano Estrutural] especial e sofrer uma consequência baseada na rolagem.</br>A maioria dos mechas possuem 4 de Estrutura e são destruídos quando atingem 0 de Estrutura."
     },
     {
       "title": "PV",
@@ -364,13 +364,18 @@
     {
       "title": "Reparo Completo",
       "category": "Definição",
-      "description":" Quando um personagem passa pelo menos 10 horas relativamente ininterruptas em um local seguro, ele pode realizar um Reparo Completo.</br><br/> Um Reparo Completo permite:<br/>⬣ Restaurar todos os PV do piloto e remover Caído e Apagado;<br/>⬣ Restaurar todos os [PV], [Estresse] e [Estrutura] de um mecha enquanto estiver intacto ou os destroços estiverem acessíveis;<br/>⬣ Remover todos os estados e condições;<br/>⬣ Reparar quaisquer armas ou sistemas destruídos;<br/>⬣ Recuperar [Poder de Núcleo (PN)], se usados;<br/>⬣ Recarregar todos Reparos e usos de armas Limitadas;<br/>⬣ Imprimir um novo mecha e equipamentos, com as instalações apropriadas."
+      "description":" Quando um personagem passa pelo menos 10 horas relativamente ininterruptas em um local seguro, ele pode realizar um Reparo Completo.</br><br/> Um Reparo Completo permite:<br/>⬣ Restaurar todos os PV do piloto e remover Caído e Apagado;<br/>⬣ Restaurar todos os [PV], [Estresse] e [Estrutura] de um mecha enquanto estiver intacto ou os destroços estiverem acessíveis;<br/>⬣ Remover todos os estados e condições;<br/>⬣ Reparar quaisquer armas ou [Sistemas] destruídos;<br/>⬣ Recuperar [Poder de Núcleo (PN)], se usados;<br/>⬣ Recarregar todos Reparos e usos de armas Limitadas;<br/>⬣ Imprimir um novo mecha e equipamentos, com as instalações apropriadas."
     },
     {
       "title": "Reparo",
       "category": "Definição",
-      "description": "Mechas podem ser reparados em combate com [Estabilizar]— recuperando todo os [PV] ao custo de 1 de Reparo — e certos sistemas. Fora de combate, eles podem ser reparados quando seus pilotos descansam. Para descansar, os pilotos precisam de pelo menos uma hora de recesso ininterrupto ou de atividade leve (por exemplo, montando acampamento ou fazer manutenção de rotina). Depois de descansar, personagens podem:<br/>⬣ Remover todo o calor;<br/>⬣ Remover qualquer estado e condição que estiverem afetando seus mechas;<br/>⬣ Recuperar metade dos [PV] do piloto e remover [Caído e Apagado].<br/> Eles também podem gastar Reparos com os seguintes custos:<br/>⬣ 1 de Reparo: Recupera os [PV] ao máximo ou repara uma arma ou sistema destruído.<br/>⬣ 2 de Reparo: Restaura 1 [Estrutura] ou 1 [Estresse].<br/>⬣ 4 de Reparo: Repara um mecha destruído."
-    }
+      "description": "Mechas podem ser reparados em combate com [Estabilizar]— recuperando todo os [PV] ao custo de 1 de Reparo — e certos [Sistemas]. Fora de combate, eles podem ser reparados quando seus pilotos descansam. Para descansar, os pilotos precisam de pelo menos uma hora de recesso ininterrupto ou de atividade leve (por exemplo, montando acampamento ou fazer manutenção de rotina). Depois de descansar, personagens podem:<br/>⬣ Remover todo o calor;<br/>⬣ Remover qualquer estado e condição que estiverem afetando seus mechas;<br/>⬣ Recuperar metade dos [PV] do piloto e remover [Caído e Apagado].<br/> Eles também podem gastar Reparos com os seguintes custos:<br/>⬣ 1 de Reparo: Recupera os [PV] ao máximo ou repara uma arma ou sistema destruído.<br/>⬣ 2 de Reparo: Restaura 1 [Estrutura] ou 1 [Estresse].<br/>⬣ 4 de Reparo: Repara um mecha destruído."
+    },
+    {
+          "title": "Sistemas",
+          "category": "Armas e Sistemas",
+          "description": "Sistemas são módulos adicionais que podem ser instalados em mechas para conceder habilidades especiais, melhorar estatísticas ou fornecer novas opções táticas em combate. Eles representam a tecnologia avançada e os recursos exclusivos que os mechas podem possuir, permitindo que os pilotos adaptem suas máquinas às suas necessidades específicas.</br></br>Cada sistema tem um custo em Pontos de Sistema (PS) e pode ter requisitos específicos, como ranques de licença ou encaixes disponíveis no Chassi do mecha. Alguns sistemas também podem ter limitações de uso, como número de vezes por missão ou condições específicas para ativação.</br></br>Ao escolher sistemas para seu mecha, considere como eles complementam seu estilo de jogo e as estratégias que você pretende usar em combate. Sistemas bem escolhidos podem fazer a diferença entre a vitória e a derrota em batalhas intensas."
+        }
 
       ],
         "Tamanhos":[
@@ -415,10 +420,10 @@
         {
           "title": "Agilidade",
           "category": "Perícia de Mecha",
-          "description": "Descreve sua capacidade de construir e pilotar mechas rápidos e evasivos.</br><br/>Role Agilidade quando:<br/>Caçar, perseguir ou fugir comincrível Velocidade;<br/>Realizar acrobacias em seu mecha;<br/>Se esconder ou se mover em silêncio;<br/>Realizar uma façanha de fina destreza manual com seu mecha;<br/>Ou desviar docaminho do perigo.</br><br/>A Agilidade do seu piloto afeta a manobrabilidade do seu<br/>mecha. Você adquire:<br/>⬣ +1 de [Evasão] para cada ponto de Agilidade.<br/>⬣ +1 de [Velocidade] para cada dois pontos de Agilidade."
+          "description": "Descreve sua capacidade de construir e pilotar mechas rápidos e evasivos.</br><br/>Role Agilidade quando:<br/>Caçar, perseguir ou fugir com incrível Velocidade;<br/>Realizar acrobacias em seu mecha;<br/>Se esconder ou se mover em silêncio;<br/>Realizar uma façanha de fina destreza manual com seu mecha;<br/>Ou desviar docaminho do perigo.</br><br/>A Agilidade do seu piloto afeta a manobrabilidade do seu<br/>mecha. Você adquire:<br/>⬣ +1 de [Evasão] para cada ponto de Agilidade.<br/>⬣ +1 de [Velocidade] para cada dois pontos de Agilidade."
         },
         {
-          "title": "Sistemas",
+          "title": "Perícia Sistemas",
           "category": "Perícia de Mecha",
           "description": "Descreve sua capacidade de construir e pilotar mechas avançados com poderosa capacidade de guerra eletrônica.</br><br/>Role Sistemas quando:<br/>Infiltrar sistemas e alvos fortalecidos com sistemas poderosos, incluindo outros mechas;<br/>Fortalecer ou suprimir um sinal;<br/>Engajar em guerra eletrônica;<br/>Escanear ou analisar informação;<br/>Fortalecer ou enfraquecer os sistemas eletrônicos de um veículo, mecha, nave espacial ou bases;<br/> interagir em segurança com formas de vida eletrônicas;<br/> ou analisar a natureza não familiar de sistemas eletrônicos.</br><br/>O Sistemas do seu piloto afeta os sistemas do seu mecha<br/>e suas habilidades de guerra eletrônica. Você adquire:<br/>⬣ +1 de [Defesa-E] e [Ataque Tecnológico] para cada ponto de Sistemas.<br/>⬣ +1 [Pontos de Sistemas (PS)] para cada dois pontos de Sistemas."
         },
@@ -620,7 +625,7 @@
       {
       "title": "Pontos de Vida",
       "category": "Definição",
-      "description": "É quanto Dano o Personagem pode sofrer antes de cair.</br>Pilotos possuem as seguintes estatísticas: [PV]: 6 + [Brio].</br><br/>Como o seu piloto, seu mecha tem Pontos de Vida ([PV]).</br>Seu mecha, entretanto, não é destruído quando chega a 0 [PV].</br>Mechas têm 4 de Estrutura — quando chegam a 0 [PV], eles sofrem 1 de Dano Estrutural, e seus [PV] se reiniciam.</br>Quando perdem Estrutura dessa forma, mechas precisam fazer um teste de Dano Estrutural especial e sofrer uma consequência baseada na rolagem.</br>A maioria dos mechas possuem 4 de Estrutura e são destruídos quando atingem 0 de Estrutura."
+      "description": "É quanto Dano o Personagem pode sofrer antes de cair.</br>Pilotos possuem as seguintes estatísticas: [PV]: 6 + [Brio].</br><br/>Como o seu piloto, seu mecha tem Pontos de Vida ([PV]).</br>Seu mecha, entretanto, não é destruído quando chega a 0 [PV].</br>Mechas têm 4 de Estrutura — quando chegam a 0 [PV], eles sofrem 1 de [Dano Estrutural], e seus [PV] se reiniciam.</br>Quando perdem Estrutura dessa forma, mechas precisam fazer um teste de [Dano Estrutural] especial e sofrer uma consequência baseada na rolagem.</br>A maioria dos mechas possuem 4 de [Estrutura] e são destruídos quando atingem 0 de [Estrutura]."
     },
       {
       "title": "Precisão",

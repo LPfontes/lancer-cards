@@ -26,7 +26,7 @@ export class CardComponent implements OnInit {
   selectedCategory: string | null = null;
   masterDictionary: Map<string, CardItem> = new Map();
 
-  // NOVO: Mapeia a categoria-pai para suas subcategorias filhas
+ 
   parentChildMap: Map<string, string[]> = new Map();
  
   ngOnInit(): void {
@@ -42,7 +42,7 @@ export class CardComponent implements OnInit {
         // Pega os nomes das subcategorias (ex: ["Ações Rápidas", "Ações Completas"])
         const subcategoryNames = Object.keys(subcategories);
 
-        // ATUALIZAÇÃO: Popula o mapa de relação
+        
         this.parentChildMap.set(categoryName, subcategoryNames);
 
         for (const subcategoryName of subcategoryNames) {
@@ -58,7 +58,7 @@ export class CardComponent implements OnInit {
       else if (Array.isArray(categoryValue) && (categoryValue.length === 0 || categoryValue[0].hasOwnProperty('title'))) {
         const items: CardItem[] = categoryValue as CardItem[];
         
-        // ATUALIZAÇÃO: Popula o mapa (aqui, o pai é seu próprio filho)
+        
         this.parentChildMap.set(categoryName, [categoryName]);
 
         this.groupedCards[categoryName] = items;
@@ -70,7 +70,7 @@ export class CardComponent implements OnInit {
     }
   }
 
-  // NOVO: Método para verificar se um bloco de conteúdo deve estar visível
+  
   isCategoryVisible(childCategoryName: string): boolean {
     // Se nenhuma categoria-pai estiver selecionada, esconde tudo
     if (!this.selectedCategory) {

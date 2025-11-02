@@ -16,7 +16,6 @@ button {
 .category_item {
   display: none; /* Esconde o elemento por padrão */
   margin-bottom: 2rem;
-  border-bottom: var(--border-width-md) solid var(--color-border-dark); /* Darker border */
   padding-bottom: 1rem;
 }
 
@@ -225,7 +224,7 @@ hr {
   top: 0;
   background-color: var(--color-bg-nav);
   padding: 1.5vh 1.5vw; /* Usando vh/vw para padding */
-  margin-bottom: 2vh; /* Usando vh para margin */
+  margin-bottom: 5vh; /* Usando vh para margin */
   z-index: 100;
   display: flex;
   justify-content: center;
