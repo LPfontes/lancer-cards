@@ -1,9 +1,3 @@
-Com base nos ficheiros que partilhaste, aqui tens uma proposta completa de `README.md` formatada e pronta a usar.
-
-Este documento destaca as funcionalidades (Compêndio e Ficha), a tecnologia utilizada (Angular 20) e inclui os créditos e avisos legais necessários (Massif Press/Tria Editora) encontrados no teu `index.html`.
-
------
-
 # Lancer Cards
 
 **Lancer Cards** é uma aplicação web desenvolvida em **Angular** criada para servir como um companheiro digital para jogadores do RPG de mesa **Lancer**. A aplicação combina um compêndio de regras de consulta rápida com uma ficha de personagem digital (Piloto e Mecha).
