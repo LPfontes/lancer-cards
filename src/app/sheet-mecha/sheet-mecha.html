@@ -5,214 +5,288 @@
         <h1>MECHA</h1>
 
         <section class="mecha-image-upload">
-            <label for="mecha-image">Imagem do Mecha</label>
-            <input type="file" id="mecha-image" name="mecha_image" accept="image/*" (change)="onFileSelected($event)">
-            <img [ngSrc]="mechaImg" alt="mecha image" width="500" height="500" class="mecha-image-preview">
+            <!-- From Uiverse.io by MuhammadHasann --> 
+             
+            <div class="card">
+                <div class="grid-info">
+                    <div *ngIf="showCropper" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+                        <image-cropper
+                            [imageChangedEvent]="imageChangedEvent"
+                            [maintainAspectRatio]="true"
+                            [aspectRatio]="1 / 1"
+                            format="png"
+                            [transform]="transform"
+                            (imageCropped)="imageCropped($event)"
+                        ></image-cropper>
+                        <div style="margin-top: 10px; width: 80%;">
+                            <label for="zoomRange">Zoom:</label>
+                            <input type="range" id="zoomRange" min="0.5" max="3" step="0.1" [value]="scale" (input)="zoom($any($event.target).value)" style="width: 100%;">
+                        </div>
+                        <div style="margin-top: 10px; display: flex; gap: 10px;">
+                            <button type="button" (click)="confirmCrop()">Confirmar</button>
+                            <button type="button" (click)="cancelCrop()">Cancelar</button>
+                        </div>
+                    </div>
+                    <div style="display: flex;">
+                        <div class="campo">
+                        <input type="text" class="card-input" name="info-nome" placeholder="Nome" style="font-size: 1.2rem; font-weight: bold;">
+                        </div>
+                        <div class="campo">
+                            <input type="text" class="card-input" name="info-chassi" placeholder="Chassi" style="font-size: 1.2rem; font-weight: bold;">
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1vh; width: 100%;" *ngIf="!showCropper">
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                        <label class="image_container" for="mecha-image">
+                        <img *ngIf="dataImg" [src]="dataImg" class="image-preview">
+                        <svg *ngIf="!dataImg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="image">
+                        <path
+                            d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
+                        ></path>
+                        </svg>
+                        <input type="file" id="mecha-image" name="mecha_image" accept="image/*" (click)="onFileClick($event)" (change)="fileChangeEvent($event)" style="display: none;">
+                    </label>
+                    <div *ngIf="dataImg" style="text-align: center; margin-top: 5px;">
+                        <button type="button" (click)="editImage()">Editar Recorte</button>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1vh; width: 100%; margin-top: 1vh;">
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">VELOCIDADE</label>
+                                <input type="number" class="card-input" name="stat_vel" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center;">
+                            </div>
+                        </div>
+                         <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">TAMANHO</label>
+                                <input type="number" class="card-input" name="stat_size" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center;">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">CAP. REPARO</label>
+                                <div class="input-number">
+                                    <input type="number" name="stat_pv_atual" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                    <span>/</span>
+                                    <input type="number" name="stat_pv_max" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                        </div>
+                    <div class="column-grid" style="justify-content: space-evenly; flex-grow: 1;">
+                        <div class="campo">
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">NL</label>
+                                <input type="number" class="card-input" name="info-nl" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                            </div>    
+                        </div>
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">BRIO</label>
+                                <input type="number" class="card-input" name="stat_brio" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                            </div>
+                        </div>
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">CASCO</label>
+                                <input type="number" class="card-input" name="stat_casco" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                            </div>
+                        </div>
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">AGILIDADE</label>
+                                <input type="number" class="card-input" name="stat_agi" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                            </div>
+                        </div>
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">SISTEMAS</label>
+                                <input type="number" class="card-input" name="stat_sis" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                            </div>
+                        </div>
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">ENGENARIA</label>
+                                <input type="number" class="card-input" name="stat_eng" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center;">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                    <div style="display: flex; flex-direction: column; gap: 1vh; width: 100%;">
+                        <div class="campo"style="display: flex; flex-direction: column; align-items: center;">
+                            <label class="card-label">EVASÃO</label>
+                            <div class="input-number">
+                                <input type="number" name="stat_evasion" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                
+                            </div>
+                        </div>
+                         <div class="campo"style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">DEFESA-E</label>
+                                <div class="input-number">
+                                    <input type="number" name="stat_edef" value="0" style="font-size: 1.2rem; font-weight: bold;">    
+                                </div> 
+                        </div>
+                        <div class="campo"style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">SENSORES</label>
+                                <div class="input-number">
+                                    <input type="number" name="stat_sensors" value="0" style="font-size: 1.2rem; font-weight: bold;">    
+                                </div> 
+                        </div>
+                        <div class="campo"style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">SALVAGUARDA</label>
+                                <div class="input-number">
+                                    <input type="number" name="stat_save" value="0" style="font-size: 1.2rem; font-weight: bold;">    
+                                </div> 
+                        </div>
+                        <div class="campo"style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">ATAQUE TEC.</label>
+                                <div class="input-number">
+                                    <input type="number" name="stat_tech_attack" value="0" style="font-size: 1.2rem; font-weight: bold;">    
+                                </div> 
+                        </div>
+                    </div>
+            </div>  
+            <div class="card">
+                <div class="grid-stats">
+                    <div class="action">
+                        <div class="campo" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">PONTOS DE VIDA</label>
+                                <div class="input-number">
+                                    <input type="number" name="stat_pv_atual" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                    <span>/</span>
+                                    <input type="number" name="stat_pv_max" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                </div>
+                        </div>
+                        <div class="campo"style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">ESTRUTURA</label>
+                                <div class="input-number">
+                                    <input type="number" name="stat_estrutura_atual" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                    <span>/</span>
+                                    <input type="number" name="stat_estrutura_max" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                </div>
+                        </div>
+                        <div class="campo"style="display: flex; flex-direction: column; align-items: center;"> 
+                                <label class="card-label">ARMADURA</label>
+                                <div class="input-number">
+                                    <input type="number" name="stat_armor" value="0" style="font-size: 1.2rem; font-weight: bold;">    
+                                </div>
+                        </div>
+                        <div class="campo"style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">BLINDAGEM</label>
+                                <div class="input-number">
+                                    <input type="number" name="stat_armor" value="0" style="font-size: 1.2rem; font-weight: bold;">    
+                                </div> 
+                        </div>
+                    </div>
+                    <div class="action">
+                        <div class="campo"style="display: flex; flex-direction: column; align-items: center;">
+                            <label class="card-label">CALOR</label>
+                            <div class="input-number">
+                                <input type="number" name="stat_calor_atual" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                <span>/</span>
+                                <input type="number" name="stat_calor_max" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                            </div>
+                        </div>
+                        <div class="campo"style="display: flex; flex-direction: column; align-items: center;">
+                            <label class="card-label">ESTRESSE</label>
+                            <div class="input-number">
+                                <input type="number" name="stat_estresse_atual" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                <span>/</span>
+                                <input type="number" name="stat_estresse_max" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                            </div>
+                        </div>
+                </div>
+                <div class="action" style="width: min-content;">
+                    
+                </div>
+                 <div class="action">
+                        <div style="width: 100%; display: flex;flex-direction: column; gap: 1vh;">
+                            <label class="card-label" style="text-align: center; ">TRAÇOS</label>
+                            <div class="campo" style="display:flex; flex-direction: column; gap: 1vh;" *ngFor="let trait of traits; let i = index">
+                                <div style="display: flex; gap: 1vh;">
+                                    <input type="text" class="card-input" [name]="'info-t-nome-' + i" placeholder="Nome" style="font-size: 1.2rem; font-weight: bold;">
+                                    <button type="button" (click)="removeTrait(i)" style="border: 1px solid var(--light); background: transparent; color: var(--light); cursor: pointer; padding: 0 10px;">X</button>
+                                </div>
+                                <textarea type="text" class="card-input" [name]="'info-t-descption-' + i" placeholder="descrição" style="font-size: 1.2rem; font-weight: bold;"></textarea>
+                            </div>
+                            <button type="button" (click)="addTrait()" style="width: 100%; padding: 5px; background: rgba(255,255,255,0.1); border: 1px solid var(--light); color: var(--light); cursor: pointer; font-weight: bold; margin-top: 1vh;">ADICIONAR TRAÇO</button>
+                        </div>
+                </div>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="action" style="justify-content: space-between;flex-direction:column">
+                    <label class="card-label" style="font-size: 1.5rem; font-weight: bold;">BÔNUS DE NÚCLEO</label>
+                    <div style="display: flex; align-items: center; gap: 1vh;">
+                        <label class="card-label" for="core-power">PODER DE NÚCLEO</label>
+                        <input type="checkbox" id="core-power" name="core_power" style="width: 2vh; height: 2vh;">
+                    </div>
+                </div>
+                <div class="campo" style="margin-top: 1vh;">
+                    <textarea class="card-input" name="core_bonus_description" placeholder="Descrição" style="font-size: 1.2rem; font-weight: bold; min-height: 10vh;"></textarea>
+                </div>
+            </div>
         </section>
+        <section class="weapons-systems">
+            <div class="grid-2-col">
+                <div class="card">
+                    <label class="card-label" style="font-size: 1.5rem; font-weight: bold; text-align: center;">ARMAS</label>
+                    
+                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 2fr 3fr 0.5fr; gap: 1vh; margin-top: 2vh; align-items: center;">
+                        <label class="card-label" style="text-align: center;">NOME</label>
+                        <label class="card-label" style="text-align: center;">ENCAIXE</label>
+                        <label class="card-label" style="text-align: center;">ALCANCE</label>
+                        <label class="card-label" style="text-align: center;">DANO</label>
+                        <label class="card-label" style="text-align: center;">TAGS</label>
+                        <label class="card-label" style="text-align: center;">EFEITOS</label>
+                        <div></div>
+                    </div>
 
-        <section class="header-info">
-            <div class="form-group">
-                <label for="mecha-nome">NOME</label>
-                <input type="text" id="mecha-nome" name="mecha_nome">
-            </div>
-            <div class="form-group">
-                <label for="mecha-chassi">CHASSI</label>
-                <input type="text" id="mecha-chassi" name="mecha_chassi">
-            </div>
-        </section>
+                    <div *ngFor="let weapon of weapons; let i = index" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 2fr 3fr 0.5fr; gap: 1vh; margin-top: 1vh; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5vh;">
+                        <div class="campo"><input type="text" class="card-input" [name]="'weapon_name_' + i" placeholder="Nome" style="text-align: center;"></div>
+                        <div class="campo"><input type="text" class="card-input" [name]="'weapon_mount_' + i" placeholder="Encaixe" style="text-align: center;"></div>
+                        <div class="campo"><input type="text" class="card-input" [name]="'weapon_range_' + i" placeholder="Alcance" style="text-align: center;"></div>
+                        <div class="campo"><input type="text" class="card-input" [name]="'weapon_damage_' + i" placeholder="Dano" style="text-align: center;"></div>
+                        <div class="campo"><input type="text" class="card-input" [name]="'weapon_tags_' + i" placeholder="Tags" style="text-align: center;"></div>
+                        <div class="campo"><input type="text" class="card-input" [name]="'weapon_effects_' + i" placeholder="Efeitos" style="text-align: center;"></div>
+                        <button type="button" (click)="removeWeapon(i)" style="border: 1px solid var(--light); background: transparent; color: var(--light); cursor: pointer; padding: 5px;">X</button>
+                    </div>
 
-        <section class="stats">
-            <div class="grid-container core-stats">
-                <div class="form-group">
-                    <label for="stat-nl">NL</label>
-                    <input type="number" id="stat-nl" name="stat_nl">
+                    <button type="button" (click)="addWeapon()" style="width: 100%; padding: 5px; background: rgba(255,255,255,0.1); border: 1px solid var(--light); color: var(--light); cursor: pointer; font-weight: bold; margin-top: 2vh;">ADICIONAR ARMA</button>
                 </div>
-                <div class="form-group">
-                    <label for="stat-casco">CASCO</label>
-                    <input type="number" id="stat-casco" name="stat_casco">
+                <div class="card">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: space-between; align-items: center;">
+                        <label class="card-label" style="font-size: 1.5rem; font-weight: bold;">SISTEMAS</label>
+                        <div class="input-number" style="height: 20px;">
+                            <label class="card-label" for="ps-total">PS TOTAL</label>
+                            <input type="number" id="ps-total" name="ps_total" value="0" style="font-size: 1.2rem; font-weight: bold;"> 
+                        </div>
+                        
+                        
+                    </div>
+                <div style="display: grid; grid-template-columns: 2fr 1fr 2fr 3fr 0.5fr; gap: 1vh; margin-top: 2vh; align-items: center;">
+                    <label class="card-label" style="text-align: center;">NOME</label>
+                    <label class="card-label" style="text-align: center;">PS</label>
+                    <label class="card-label" style="text-align: center;">TAGS</label>
+                    <label class="card-label" style="text-align: center;">EFEITOS</label>
+                    <div></div>
                 </div>
-                <div class="form-group">
-                    <label for="stat-agi">AGI</label>
-                    <input type="number" id="stat-agi" name="stat_agi">
-                </div>
-                <div class="form-group">
-                    <label for="stat-sis">SIS</label>
-                    <input type="number" id="stat-sis" name="stat_sis">
-                </div>
-                <div class="form-group">
-                    <label for="stat-eng">ENG</label>
-                    <input type="number" id="stat-eng" name="stat_eng">
-                </div>
-            </div>
-            
-            <div class="grid-container derived-stats">
-                <div class="form-group">
-                    <label for="stat-pv">PV</label>
-                    <input type="number" id="stat-pv" name="stat_pv">
-                </div>
-                <div class="form-group">
-                    <label for="stat-estresse">ESTRESSE</label>
-                    <input type="number" id="stat-estresse" name="stat_estresse">
-                </div>
-                <div class="form-group">
-                    <label for="stat-calor">CALOR</label>
-                    <input type="number" id="stat-calor" name="stat_calor">
-                </div>
-                <div class="form-group">
-                    <label for="stat-estrutura">ESTRUTURA</label>
-                    <input type="number" id="stat-estrutura" name="stat_estrutura">
-                </div>
-                <div class="form-group">
-                    <label for="stat-blindagem">BLINDAGEM</label>
-                    <input type="number" id="stat-blindagem" name="stat_blindagem">
-                </div>
-                <div class="form-group">
-                    <label for="stat-armadura">ARMADURA</label>
-                    <input type="number" id="stat-armadura" name="stat_armadura">
-                </div>
-            </div>
 
-            <div class="grid-container secondary-stats">
-                <div class="form-group">
-                    <label for="stat-bonus-atq">BÔNUS ATQ</label>
-                    <input type="text" id="stat-bonus-atq" name="stat_bonus_atq">
+                <div *ngFor="let system of systems; let i = index" style="display: grid; grid-template-columns: 2fr 1fr 2fr 3fr 0.5fr; gap: 1vh; margin-top: 1vh; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5vh;">
+                    <div class="campo"><input type="text" class="card-input" [name]="'system_name_' + i" placeholder="Nome" style="text-align: center;"></div>
+                    <div class="campo"><input type="number" class="card-input" [name]="'system_ps_' + i" placeholder="PS" style="text-align: center;"></div>
+                    <div class="campo"><input type="text" class="card-input" [name]="'system_tags_' + i" placeholder="Tags" style="text-align: center;"></div>
+                    <div class="campo"><input type="text" class="card-input" [name]="'system_effects_' + i" placeholder="Efeitos" style="text-align: center;"></div>
+                    <button type="button" (click)="removeSystem(i)" style="border: 1px solid var(--light); background: transparent; color: var(--light); cursor: pointer; padding: 5px;">X</button>
                 </div>
-                <div class="form-group">
-                    <label for="stat-ato-tec">ATO TEC</label>
-                    <input type="text" id="stat-ato-tec" name="stat_ato_tec">
-                </div>
-                <div class="form-group">
-                    <label for="stat-val-salv">VAL SALV</label>
-                    <input type="text" id="stat-val-salv" name="stat_val_salv">
-                </div>
-                <div class="form-group">
-                    <label for="stat-velocidade">VELOCIDADE</label>
-                    <input type="number" id="stat-velocidade" name="stat_velocidade">
-                </div>
-                <div class="form-group">
-                    <label for="stat-def-e">DEF-E</label>
-                    <input type="number" id="stat-def-e" name="stat_def_e">
-                </div>
-                <div class="form-group">
-                    <label for="stat-evasao">EVASÃO</label>
-                    <input type="number" id="stat-evasao" name="stat_evasao">
-                </div>
-                <div class="form-group">
-                    <label for="stat-sensores">SENSORES</label>
-                    <input type="number" id="stat-sensores" name="stat_sensores">
-                </div>
-                <div class="form-group">
-                    <label for="stat-tamanho">TAMANHO</label>
-                    <input type="text" id="stat-tamanho" name="stat_tamanho">
+
+                <button type="button" (click)="addSystem()" style="width: 100%; padding: 5px; background: rgba(255,255,255,0.1); border: 1px solid var(--light); color: var(--light); cursor: pointer; font-weight: bold; margin-top: 2vh;">ADICIONAR SISTEMA</button>
                 </div>
             </div>
         </section>
-
-        <section class="chassi-traits">
-            <h2>Traços do Chassi</h2>
-            <div class="grid-container">
-                <div class="form-group">
-                    <textarea name="chassi_trait_1"></textarea>
-                </div>
-                <div class="form-group">
-                    <textarea name="chassi_trait_2"></textarea>
-                </div>
-            </div>
-        </section>
-
-        <section class="core-bonus">
-            <div class="section-header">
-                <h2>Bônus de Núcleo</h2>
-                <div class="form-group hex-input">
-                    <label for="core-power">PODER DE NÚCLEO</label>
-                    <input type="checkbox" id="core-power" name="core_power">
-                </div>
-            </div>
-            <div class="form-group">
-                <textarea name="core_bonus_description"></textarea>
-            </div>
-        </section>
-
-        <section class="weapons">
-            <h2>Armas</h2>
-            <table id="weapons-table">
-                <thead>
-                    <tr>
-                        <th>NOME</th>
-                        <th>ENCAIXE</th>
-                        <th>ALCANCE</th>
-                        <th>DANO</th>
-                        <th>TAGS</th>
-                        <th>EFEITOS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text" name="weapon_name_1"></td>
-                        <td><input type="text" name="weapon_encaixe_1"></td>
-                        <td><input type="text" name="weapon_alcance_1"></td>
-                        <td><input type="text" name="weapon_dano_1"></td>
-                        <td><input type="text" name="weapon_tags_1"></td>
-                        <td><input type="text" name="weapon_efeitos_1"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="weapon_name_2"></td>
-                        <td><input type="text" name="weapon_encaixe_2"></td>
-                        <td><input type="text" name="weapon_alcance_2"></td>
-                        <td><input type="text" name="weapon_dano_2"></td>
-                        <td><input type="text" name="weapon_tags_2"></td>
-                        <td><input type="text" name="weapon_efeitos_2"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="weapon_name_3"></td>
-                        <td><input type="text" name="weapon_encaixe_3"></td>
-                        <td><input type="text" name="weapon_alcance_3"></td>
-                        <td><input type="text" name="weapon_dano_3"></td>
-                        <td><input type="text" name="weapon_tags_3"></td>
-                        <td><input type="text" name="weapon_efeitos_3"></td>
-                    </tr>
-                    </tbody>
-            </table>
-        </section>
-
-        <section class="systems">
-            <div class="section-header">
-                <h2>Sistemas</h2>
-                <div class="form-group hex-input">
-                    <label for="ps-total">PS TOTAL</label>
-                    <input type="number" id="ps-total" name="ps_total" style="width: 60px;">
-                </div>
-            </div>
-            <table id="systems-table">
-                <thead>
-                    <tr>
-                        <th>NOME</th>
-                        <th>PS</th>
-                        <th>TAGS</th>
-                        <th>EFEITOS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text" name="system_name_1"></td>
-                        <td><input type="number" name="system_ps_1"></td>
-                        <td><input type="text" name="system_tags_1"></td>
-                        <td><input type="text" name="system_efeitos_1"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="system_name_2"></td>
-                        <td><input type="number" name="system_ps_2"></td>
-                        <td><input type="text" name="system_tags_2"></td>
-                        <td><input type="text" name="system_efeitos_2"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="system_name_3"></td>
-                        <td><input type="number" name="system_ps_3"></td>
-                        <td><input type="text" name="system_tags_3"></td>
-                        <td><input type="text" name="system_efeitos_3"></td>
-                    </tr>
-                    </tbody>
-            </table>
-        </section>
-
     </form>
