@@ -1,1 +1,206 @@
-<p>sheet-pilot works!</p>
+<main class="lancer-sheet">
+        
+    <form id="pilot-sheet">
+  
+          <h1>PILOTO</h1>
+  
+          <section class="pilot-image-upload">
+               
+              <div class="card">
+                  <div class="grid-info">
+                      <div *ngIf="showCropper" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+                          <image-cropper
+                              [imageChangedEvent]="imageChangedEvent"
+                              [maintainAspectRatio]="true"
+                              [aspectRatio]="1 / 1"
+                              format="png"
+                              [transform]="transform"
+                              (imageCropped)="imageCropped($event)"
+                          ></image-cropper>
+                          <div style="margin-top: 10px; width: 80%;">
+                              <label for="zoomRange">Zoom:</label>
+                              <input type="range" id="zoomRange" min="0.5" max="3" step="0.1" [value]="scale" (input)="zoom($any($event.target).value)" style="width: 100%;">
+                          </div>
+                          <div style="margin-top: 10px; display: flex; gap: 10px;">
+                              <button type="button" (click)="confirmCrop()">Confirmar</button>
+                              <button type="button" (click)="cancelCrop()">Cancelar</button>
+                          </div>
+                      </div>
+                      <div style="display: flex;">
+                          <div class="campo">
+                          <input type="text" class="card-input" name="info-nome" placeholder="Nome" style="font-size: 1.2rem; font-weight: bold;">
+                          </div>
+                          <div class="campo">
+                              <input type="text" class="card-input" name="info-callsign" placeholder="Codinome" style="font-size: 1.2rem; font-weight: bold;">
+                          </div>
+                      </div>
+                      <div style="display: flex; gap: 1vh; width: 100%;" *ngIf="!showCropper">
+                          <div style="display: flex; flex-direction: column; align-items: center;">
+                          <label class="image_container" for="pilot-image">
+                          <img *ngIf="dataImg" [src]="dataImg" class="image-preview">
+                          <svg *ngIf="!dataImg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="image">
+                          <path
+                              d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
+                          ></path>
+                          </svg>
+                          <input type="file" id="pilot-image" name="pilot_image" accept="image/*" (click)="onFileClick($event)" (change)="fileChangeEvent($event)" style="display: none;">
+                      </label>
+                      <div *ngIf="dataImg" style="text-align: center; margin-top: 5px;">
+                          <button type="button" (click)="editImage()">Editar Recorte</button>
+                      </div>
+                          </div>
+                          <div class="column-grid" style="justify-content: space-evenly; flex-grow: 1;">
+                            <div class="campo" >
+                              <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                  <label class="card-label">NL</label>
+                                  <input type="number" class="card-input" name="info-ll" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center;">
+                              </div>
+                          </div>
+                           <div class="campo" >
+                              <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                  <label class="card-label">BRIO</label>
+                                  <input type="number" class="card-input" name="stat_grit" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center;">
+                              </div>
+                          </div>
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">CASCO</label>
+                                <input type="number" class="card-input" name="stat_casco" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                            </div>
+                        </div>
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">AGILIDADE</label>
+                                <input type="number" class="card-input" name="stat_agi" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                            </div>
+                        </div>
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">SISTEMAS</label>
+                                <input type="number" class="card-input" name="stat_sis" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                            </div>
+                        </div>
+                        <div class="campo" >
+                            <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                <label class="card-label">ENGENARIA</label>
+                                <input type="number" class="card-input" name="stat_eng" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center;">
+                            </div>
+                        </div>
+                    </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card">
+                <div class="campo">
+                              <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                  <label class="card-label">PV</label>
+                                  <div class="input-number">
+                                      <input type="number" name="stat_hp_current" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                      <span>/</span>
+                                      <input type="number" name="stat_hp_max" value="0" style=" font-size: 1.2rem; font-weight: bold;">
+                                  </div>
+                              </div>    
+                          </div>
+                          <div class="campo" >
+                              <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                  <label class="card-label">ARMADURA</label>
+                                  <input type="number" class="card-input" name="stat_armor" value="0" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                              </div>
+                          </div>
+                          <div class="campo" >
+                              <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                  <label class="card-label">EVASÃO</label>
+                                  <input type="number" class="card-input" name="stat_evasion" value="10" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                              </div>
+                          </div>
+                          <div class="campo" >
+                              <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                  <label class="card-label">DEFESA-E</label>
+                                  <input type="number" class="card-input" name="stat_edef" value="10" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                              </div>
+                          </div>
+                          <div class="campo" >
+                              <div class="input-number" style="display: flex; flex-direction: column; align-items: center;">
+                                  <label class="card-label">VELOCIDADE</label>
+                                  <input type="number" class="card-input" name="stat_speed" value="4" style="font-size: 1.2rem; font-weight: bold; min-width: 50px; text-align: center; ">
+                              </div>
+                          </div> 
+              </div>
+              <div class="card">
+                   <div class="action">
+                          <div style="width: 100%; display: flex;flex-direction: column; gap: 1vh;">
+                              <label class="card-label" style="text-align: center; font-size: 1.5rem; font-weight: bold;">GATILHOS</label>
+                              <div class="campo" style="display:flex; flex-direction: column; gap: 1vh;" *ngFor="let trigger of triggers; let i = index">
+                                  <div style="display: flex; gap: 1vh; align-items: center;">
+                                      <input type="text" class="card-input" [name]="'trigger_name_' + i" placeholder="Nome do Gatilho" style="font-size: 1.2rem; font-weight: bold;">
+                                      <div class="input-number">
+                                          <input type="number" [name]="'trigger_bonus_' + i" value="0" style="font-size: 1.2rem; font-weight: bold; width: 50px;">
+                                      </div>
+                                      <button type="button" (click)="removeTrigger(i)" style="border: 1px solid var(--light); background: transparent; color: var(--light); cursor: pointer; padding: 0 10px;">X</button>
+                                  </div>
+                              </div>
+                              <button type="button" (click)="addTrigger()" style="width: 100%; padding: 5px; background: rgba(255,255,255,0.1); border: 1px solid var(--light); color: var(--light); cursor: pointer; font-weight: bold; margin-top: 1vh;">ADICIONAR GATILHO</button>
+                          </div>
+                  </div>
+              </div>
+              <div class="card">    
+                    <div class="action">
+                          <div style="width: 100%; display: flex;flex-direction: column; gap: 1vh;">
+                              <label class="card-label" style="text-align: center; font-size: 1.5rem; font-weight: bold;">LICENÇAS</label>
+                              <div class="campo" style="display:flex; flex-direction: column; gap: 1vh;" *ngFor="let license of licenses; let i = index">
+                                  <div style="display: flex; gap: 1vh; align-items: center;">
+                                      <input type="text" class="card-input" [name]="'license_name_' + i" placeholder="Nome da Licença" style="font-size: 1.2rem; font-weight: bold;">
+                                      <div class="input-number">
+                                          <input type="number" [name]="'license_rank_' + i" value="1" style="font-size: 1.2rem; font-weight: bold; width: 50px;">
+                                      </div>
+                                      <button type="button" (click)="removeLicense(i)" style="border: 1px solid var(--light); background: transparent; color: var(--light); cursor: pointer; padding: 0 10px;">X</button>
+                                  </div>
+                              </div>
+                              <button type="button" (click)="addLicense()" style="width: 100%; padding: 5px; background: rgba(255,255,255,0.1); border: 1px solid var(--light); color: var(--light); cursor: pointer; font-weight: bold; margin-top: 1vh;">ADICIONAR LICENÇA</button>
+                          </div>
+                    </div>
+              </div>
+          </section>
+          <section class="talents-gear">
+              <div class="grid-2-col">
+                  <div class="card">
+                      <label class="card-label" style="font-size: 1.5rem; font-weight: bold; text-align: center;">TALENTOS</label>
+                      <div *ngFor="let talent of talents; let i = index" style="display: flex; flex-direction: column; gap: 0.5vh; margin-top: 1vh; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1vh;">
+                          <div style="display: flex; gap: 1vh; align-items: center;">
+                              <input type="text" class="card-input" [name]="'talent_name_' + i" placeholder="Nome do Talento" style="font-weight: bold; flex-grow: 1;">
+                              <div class="input-number">
+                                  <label class="card-label" style="font-size: 0.8rem;">RANK</label>
+                                  <input type="number" [name]="'talent_rank_' + i" value="1" style="width: 40px;">
+                              </div>
+                              <button type="button" (click)="removeTalent(i)" style="border: 1px solid var(--light); background: transparent; color: var(--light); cursor: pointer; padding: 0 10px;">X</button>
+                          </div>
+                          <textarea class="card-input" [name]="'talent_desc_' + i" placeholder="Descrição" style="font-size: 0.9rem; min-height: 40px;"></textarea>
+                      </div>
+                      <button type="button" (click)="addTalent()" style="width: 100%; padding: 5px; background: rgba(255,255,255,0.1); border: 1px solid var(--light); color: var(--light); cursor: pointer; font-weight: bold; margin-top: 2vh;">ADICIONAR TALENTO</button>
+                  </div>
+                  <div class="card">
+                      <label class="card-label" style="font-size: 1.5rem; font-weight: bold; text-align: center;">EQUIPAMENTOS</label>
+                      <div *ngFor="let item of gear; let i = index" style="display: flex; flex-direction: column; gap: 0.5vh; margin-top: 1vh; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1vh;">
+                          <div style="display: flex; gap: 1vh; align-items: center;">
+                              <input type="text" class="card-input" [name]="'gear_name_' + i" placeholder="Nome do Item" style="font-weight: bold; flex-grow: 1;">
+                              <button type="button" (click)="removeGear(i)" style="border: 1px solid var(--light); background: transparent; color: var(--light); cursor: pointer; padding: 0 10px;">X</button>
+                          </div>
+                          <input type="text" class="card-input" [name]="'gear_tags_' + i" placeholder="Tags" style="font-size: 0.8rem;">
+                          <textarea class="card-input" [name]="'gear_desc_' + i" placeholder="Efeitos/Descrição" style="font-size: 0.9rem; min-height: 40px;"></textarea>
+                      </div>
+                      <button type="button" (click)="addGear()" style="width: 100%; padding: 5px; background: rgba(255,255,255,0.1); border: 1px solid var(--light); color: var(--light); cursor: pointer; font-weight: bold; margin-top: 2vh;">ADICIONAR ITEM</button>
+                  </div>
+              </div>
+          </section>
+          <section class="bio">
+             <div class="card">
+                  <div class="action" style="justify-content: space-between;flex-direction:column">
+                      <label class="card-label" style="font-size: 1.5rem; font-weight: bold;">BIOGRAFIA / ANOTAÇÕES</label>
+                  </div>
+                  <div class="campo" style="margin-top: 1vh;">
+                      <textarea class="card-input" name="pilot_bio" placeholder="Descrição, antecedentes, etc..." style="font-size: 1.2rem; font-weight: bold; min-height: 20vh;"></textarea>
+                  </div>
+              </div>
+          </section>
+      </form>
+  ```
